@@ -59,7 +59,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="It&#39;s an IT blog..."/>
   <meta name="keyword" content="v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
-  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+  <link rel="shortcut icon" href="/img/avatar/hatsune_miku.png"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -142,7 +142,7 @@
   <link rel="canonical" href="http://yoursite-url/cn/">
   <title>
     
-      either thin | or die
+      LHS的矩形海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -150,7 +150,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -184,7 +184,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -230,7 +230,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Your Title</a>
+      <a class="navbar-brand" href="/">LHS的矩形海</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -409,9 +409,9 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
           <div class="site-heading">
-            <h1>Your Title</h1>
+            <h1>LHS的矩形海</h1>
             <!--<hr class="small">-->
-            <span class="subheading">This is hexo theme</span>
+            <span class="subheading">我会尽量发一些有趣的东西</span>
           </div>
           
         </div>
@@ -478,31 +478,156 @@
   <!-- top end -->
   
 
-  <a href="/cn/Hexo-Theme-LiveMyLife/">
+  <a href="/cn/java-server-model/">
     <h2 class="post-title">
-      Hexo-Theme-LiveMyLife
+      java课设保姆级教程1
     </h2>
     <h3 class="post-subtitle">
       A succinct hexo theme...
     </h3>
     <div class="post-content-preview">
       
-移植 Hux Blog 的主题，感谢 Huxpro 设计了如此完美的主题。
-由 Vincent 创建的 LiveMyLife 的主题修改来源 YenYuHsuan，参考主题 dusign、Utone，感谢 dusign、Utone。
+这是我们组一周目做后端时，用的文档。
+我知道，十分简陋。没有多对多，没有复杂的逻辑，只实现了基本功能。
 
-仓库
-Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylife
-Gitee 仓库地址：ht......
+1、models文件夹下建实体类
+12345678910@Entity@Table(	name = &quot;repositoryName&quot;)//数据库对应的表名public class ClassName &#123;    @Id    private Integer ......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Your Name on
-    2020-04-17
+    Posted by lhs on
+    2022-03-16
   </p>
   <div class="tags">
     
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
+    
+    <a href="/tags/#jpa" title="jpa">jpa</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/java-server-interface1/">
+    <h2 class="post-title">
+      java课设接口1
+    </h2>
+    <h3 class="post-subtitle">
+      A succinct hexo theme...
+    </h3>
+    <div class="post-content-preview">
+      
+这是我们组一周目做后端时，用的接口。
+因为是重写了前端，所以有较大的发挥空间，于是制定了组内统一的接口。
+
+（1）学生基本信息、联系方式、入学前信息、家庭信息、社会关系等基本信息的管理
+1url : teach/studentEditSubmit
+
+
+
+参数
+类型
+意义
+
+
+
+
+id
+number
+主键
+
+
+studentName
+String
+学生姓名
+
+
+studentNum
+numb......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by lhs on
+    2022-03-04
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
+    
+    <a href="/tags/#jpa" title="jpa">jpa</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/java-server-interface2/">
+    <h2 class="post-title">
+      java课设接口1
+    </h2>
+    <h3 class="post-subtitle">
+      A succinct hexo theme...
+    </h3>
+    <div class="post-content-preview">
+      
+这是我们组一周目做后端时，用的接口。
+因为是重写了前端，所以有较大的发挥空间，于是制定了组内统一的接口。
+
+（1）学生基本信息、联系方式、入学前信息、家庭信息、社会关系等基本信息的管理
+1url : teach/studentEditSubmit
+
+
+
+参数
+类型
+意义
+
+
+
+
+id
+number
+主键
+
+
+studentName
+String
+学生姓名
+
+
+studentNum
+numb......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by lhs on
+    2022-03-04
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
+    
+    <a href="/tags/#jpa" title="jpa">jpa</a>
     
   </div>
   
@@ -554,7 +679,11 @@ Gitee 仓库地址：ht......
   <div class="tags">
     
     
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="2">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#spring boot" title="spring boot" rel="3">spring boot</a>
+    
+    
+    
+    <a href="/tags/#jpa" title="jpa" rel="3">jpa</a>
     
     
   </div>
@@ -569,13 +698,13 @@ Gitee 仓库地址：ht......
   <div class="short-about">
 
     
-    <img id="avatar_pic" src="/img/avatar/fatpeople.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    <img id="avatar_pic" src="/img/avatar/miku.png" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
     -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
     -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
     
 
     
-    <p>Fat people have no future, either thin or die...</p>
+    <p>miku miku sing&amp;dance!</p>
     
 
     <!-- SNS Link -->
@@ -584,7 +713,7 @@ Gitee 仓库地址：ht......
 
       
       <li>
-        <a target="_blank" href="https://github.com/V-Vincen">
+        <a target="_blank" href="https://github.com/half-tooth">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -595,7 +724,7 @@ Gitee 仓库地址：ht......
 
       
       <li>
-        <a target="_blank" href="https://twitter.com/V_Vincen_">
+        <a target="_blank" href="https://twitter.com/half-tooth">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -606,7 +735,7 @@ Gitee 仓库地址：ht......
 
       
       <li>
-        <a target="_blank" href="https://www.instagram.com/v_vincen_">
+        <a target="_blank" href="https://www.instagram.com/half-tooth">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
@@ -644,12 +773,16 @@ Gitee 仓库地址：ht......
 <div class="widget">
   <ul>
     
-    <a href="Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
+    <a href="java-server-model/">
+      <li>java课设保姆级教程1</li>
     </a>
     
-    <a href="../en/Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
+    <a href="java-server-interface1/">
+      <li>java课设接口1</li>
+    </a>
+    
+    <a href="java-server-interface2/">
+      <li>java课设接口1</li>
     </a>
     
   </ul>
@@ -663,13 +796,9 @@ Gitee 仓库地址：ht......
 <h5><a href="/">链友</a></h5>
 <ul class="list-inline">
   
-  <li><a href="https://v-vincen.life/" target="_blank">V_Vincen</a></li>
+  <li><a href="https://zwn2001.github.io/" target="_blank">zwn</a></li>
   
-  <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
-  
-  <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
-  
-  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
+  <li><a href="http://47.100.74.245/" target="_blank">gsr</a></li>
   
 </ul>
 
@@ -680,7 +809,7 @@ Gitee 仓库地址：ht......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/03/">March 2022</a><span class="archive-list-count">3</span></li></ul>
 </div>
 
 
@@ -692,8 +821,8 @@ Gitee 仓库地址：ht......
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
+    <a href="/categories/#Java课设2021">
+      <li>Java课设2021</li>
     </a>
     
   </ul>
@@ -721,7 +850,7 @@ Gitee 仓库地址：ht......
 
           
             <li>
-              <a target="_blank" href="https://github.com/V-Vincen">
+              <a target="_blank" href="https://github.com/half-tooth">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -732,7 +861,7 @@ Gitee 仓库地址：ht......
 
           
             <li>
-              <a target="_blank" href="https://twitter.com/V_Vincen_">
+              <a target="_blank" href="https://twitter.com/half-tooth">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -743,7 +872,7 @@ Gitee 仓库地址：ht......
 
           
             <li>
-              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+              <a target="_blank" href="https://www.instagram.com/half-tooth">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
@@ -772,7 +901,7 @@ Gitee 仓库地址：ht......
         </ul>
         <p class="copyright text-muted">
           Copyright &copy;
-          Your Name
+          lhs
           2022
           <br>
           Theme by
@@ -823,7 +952,7 @@ Gitee 仓库地址：ht......
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='ヽ(*´з｀*)ﾉ,(⑉°з°)-♡,(づ ●─● )づ,(ɔˆ ³(ˆ⌣ˆc),(ღ˘⌣˘ღ),Hi~ o(*￣▽￣*)ブ,=^･ω･^=' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399'></script>
   
 
   
