@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/java-server-interface1/">
+  <link rel="canonical" href="http://yoursite-url/cn/java-server-2-log1/">
   <title>
     
-      java课设接口1 - LHS的矩形海
+      java课设二周目阶段总结1 - LHS的矩形海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -391,14 +391,16 @@
               
               <a class="tag" href="/tags/#spring boot" title="spring boot">spring boot</a>
               
-              <a class="tag" href="/tags/#jpa" title="jpa">jpa</a>
+              <a class="tag" href="/tags/#mybatis plus" title="mybatis plus">mybatis plus</a>
+              
+              <a class="tag" href="/tags/#mysql" title="mysql">mysql</a>
               
             </div>
-            <h1>java课设接口1</h1>
+            <h1>java课设二周目阶段总结1</h1>
             <h2 class="subheading">A succinct hexo theme...</h2>
             <span class="meta">
               Posted by lhs on
-              2022-03-04
+              2022-03-30
             </span>
 
 
@@ -406,11 +408,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">3</span> Minutes
+              Estimated Reading Time <span class="post-count">10</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">977</span> In Total
+              Words <span class="post-count">2.3k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,518 +475,127 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <blockquote>
-<p>这是我们组一周目做后端时，用的接口。</p>
-<p>因为是重写了前端，所以有较大的发挥空间，于是制定了组内统一的接口。</p>
+<p>这一阶段我80%的错误都是sql写错了</p>
+<p>sql语句一生之敌。</p>
 </blockquote>
-<h1>（1）学生基本信息、联系方式、入学前信息、家庭信息、社会关系等基本信息的管理</h1>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url : <span class="type">teach</span>/studentEditSubmit</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>studentName</td>
-<td>String</td>
-<td>学生姓名</td>
-</tr>
-<tr>
-<td>studentNum</td>
-<td>number</td>
-<td>学号</td>
-</tr>
-<tr>
-<td>sex</td>
-<td>number(1/0)</td>
-<td>性别</td>
-</tr>
-<tr>
-<td>age</td>
-<td>number</td>
-<td>年龄</td>
-</tr>
-<tr>
-<td>birthday</td>
-<td>date</td>
-<td>生日</td>
-</tr>
-<tr>
-<td>telephone</td>
-<td>number</td>
-<td>电话号码</td>
-</tr>
-<tr>
-<td>pName</td>
-<td>String</td>
-<td>小学校名</td>
-</tr>
-<tr>
-<td>pPosition</td>
-<td>String</td>
-<td>小学地址</td>
-</tr>
-<tr>
-<td>pEnterDate</td>
-<td>date</td>
-<td>小学入学时间</td>
-</tr>
-<tr>
-<td>pGraduateDate</td>
-<td>date</td>
-<td>小学毕业时间</td>
-</tr>
-<tr>
-<td>jName</td>
-<td>String</td>
-<td>初中校名</td>
-</tr>
-<tr>
-<td>jPosition</td>
-<td>String</td>
-<td>初中地址</td>
-</tr>
-<tr>
-<td>jEnterDate</td>
-<td>date</td>
-<td>初中入学时间</td>
-</tr>
-<tr>
-<td>jGraduateDate</td>
-<td>date</td>
-<td>初中毕业时间</td>
-</tr>
-<tr>
-<td>sName</td>
-<td>String</td>
-<td>高中校名</td>
-</tr>
-<tr>
-<td>sPosition</td>
-<td>String</td>
-<td>高中地址</td>
-</tr>
-<tr>
-<td>sEnterDate</td>
-<td>date</td>
-<td>高中入学时间</td>
-</tr>
-<tr>
-<td>sGraduateDate</td>
-<td>date</td>
-<td>高中毕业时间</td>
-</tr>
-<tr>
-<td>familyNum</td>
-<td>number</td>
-<td>家庭人口数</td>
-</tr>
-<tr>
-<td>familyPosition</td>
-<td>String</td>
-<td>家庭地址</td>
-</tr>
-<tr>
-<td>faName</td>
-<td>String</td>
-<td>父亲姓名</td>
-</tr>
-<tr>
-<td>faPhone</td>
-<td>number</td>
-<td>父亲电话号码</td>
-</tr>
-<tr>
-<td>faWorkplace</td>
-<td>String</td>
-<td>父亲工作单位</td>
-</tr>
-<tr>
-<td>maName</td>
-<td>String</td>
-<td>母亲姓名</td>
-</tr>
-<tr>
-<td>maPhone</td>
-<td>number</td>
-<td>母亲电话号码</td>
-</tr>
-<tr>
-<td>maWorkplace</td>
-<td>String</td>
-<td>母亲工作单位</td>
-</tr>
-</tbody>
-</table>
-<h1>（2）学习信息管理，包括课程基本信息，课程中心（教材、课件、参考资料等）选课信息、考勤信息、作业信息、成绩信息等</h1>
-<h2 id="根目录：-study">根目录：/study</h2>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/submitCourseInfo</span></span><br><span class="line"><span class="string">/submitSelectCourse</span></span><br><span class="line"><span class="string">/submitFailClass</span></span><br><span class="line"><span class="string">/submitHomework</span></span><br><span class="line"><span class="string">/submitGrades</span></span><br></pre></td></tr></table></figure>
-<h3 id="1、课程中心">1、课程中心</h3>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/submitCourseInfo</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>courseName</td>
-<td>String</td>
-<td>课程名称</td>
-</tr>
-<tr>
-<td>bookName</td>
-<td>String</td>
-<td>教材</td>
-</tr>
-<tr>
-<td>resName</td>
-<td>String</td>
-<td>参考资料</td>
-</tr>
-<tr>
-<td>pptUrl</td>
-<td>String</td>
-<td>课件</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2、选课信息">2、选课信息</h3>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/submitSelectCourse</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>selectCourseName</td>
-<td>String</td>
-<td>选课名称</td>
-</tr>
-<tr>
-<td>teacher</td>
-<td>String</td>
-<td>教师</td>
-</tr>
-<tr>
-<td>classTime</td>
-<td>String</td>
-<td>上课时间</td>
-</tr>
-<tr>
-<td>classPlace</td>
-<td>String</td>
-<td>上课地点</td>
-</tr>
-<tr>
-<td>point</td>
-<td>number</td>
-<td>学分</td>
-</tr>
-</tbody>
-</table>
-<h3 id="3、考勤信息">3、考勤信息</h3>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/submitFailClass</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>failClassName</td>
-<td>String</td>
-<td>缺课名称</td>
-</tr>
-<tr>
-<td>failClassDate</td>
-<td>date</td>
-<td>翘课时间</td>
-</tr>
-<tr>
-<td>failClassTeacher</td>
-<td>String</td>
-<td>被翘课的教师</td>
-</tr>
-</tbody>
-</table>
-<p>我觉着，考勤只要光记录缺勤的情况不就好了</p>
-<h3 id="4、作业信息">4、作业信息</h3>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/submitHomework</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>homeworkName</td>
-<td>String</td>
-<td>课程</td>
-</tr>
-<tr>
-<td>homeworkDate</td>
-<td>date</td>
-<td>作业发布日期</td>
-</tr>
-<tr>
-<td>homeworkTeacher</td>
-<td>String</td>
-<td>批改教师</td>
-</tr>
-<tr>
-<td>assessment</td>
-<td>String</td>
-<td>批改评价</td>
-</tr>
-</tbody>
-</table>
-<h3 id="5、成绩信息">5、成绩信息</h3>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/submitGrades</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>math</td>
-<td>number</td>
-<td>数学分数</td>
-</tr>
-<tr>
-<td>physics</td>
-<td>number</td>
-<td>物理分数</td>
-</tr>
-</tbody>
-</table>
-<h1>（3）学生社会实践、学科竞赛、科技成果、培训讲座、创新项目、校外实习等创新实践信息管理</h1>
-<h2 id="根目录：-practice">根目录：/practice</h2>
-<p>1、社会实践</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/social</span></span><br></pre></td></tr></table></figure>
-<p>2、学科竞赛</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/contest</span></span><br></pre></td></tr></table></figure>
-<p>3、科技成果</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/tech</span></span><br></pre></td></tr></table></figure>
-<p>4、培训讲座</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/lecture</span></span><br></pre></td></tr></table></figure>
-<p>5、创新项目</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/innovation</span></span><br></pre></td></tr></table></figure>
-<p>6、校外实习</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">int</span>ernship</span><br></pre></td></tr></table></figure>
-<p>为了大家都省事，我把他们的参数设置成了一样的</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>description</td>
-<td>String</td>
-<td>活动内容描述</td>
-</tr>
-<tr>
-<td>time</td>
-<td>date</td>
-<td>活动时间</td>
-</tr>
-<tr>
-<td>hours</td>
-<td>number</td>
-<td>时长或等效时长</td>
-</tr>
-</tbody>
-</table>
-<h1>（4）学生荣誉信息管理，包括获得的各种称号奖励等</h1>
-<h2 id="目录：-honor（没有子目录）">目录：/honor（没有子目录）</h2>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>details</td>
-<td>String</td>
-<td>获得的各种称号奖励等</td>
-</tr>
-</tbody>
-</table>
-<h1>（5）学生体育活动、外出旅游、文艺演出、聚会、等日常活动管理。</h1>
-<h2 id="根目录：-daily">根目录：/daily</h2>
-<p>1、体育活动</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/pe</span></span><br></pre></td></tr></table></figure>
-<p>2、外出旅游</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/vacation</span></span><br></pre></td></tr></table></figure>
-<p>3、文艺演出</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/performance</span></span><br></pre></td></tr></table></figure>
-<p>4、聚会</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/party</span></span><br></pre></td></tr></table></figure>
-<p>他们同样具有相似的内容，所以参数设置成相同的</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>description</td>
-<td>String</td>
-<td>活动内容描述</td>
-</tr>
-<tr>
-<td>time</td>
-<td>date</td>
-<td>活动时间</td>
-</tr>
-<tr>
-<td>place</td>
-<td>String</td>
-<td>活动地点</td>
-</tr>
-</tbody>
-</table>
-<h1>（6）学生外出请假信息和生活学习消费等日志信息管理</h1>
-<h2 id="根目录：-log">根目录：/log</h2>
-<p>1、外出请假信息</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/dayOff</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>from</td>
-<td>date</td>
-<td>起始时间</td>
-</tr>
-<tr>
-<td>to</td>
-<td>date</td>
-<td>结束时间</td>
-</tr>
-<tr>
-<td>reason</td>
-<td>String</td>
-<td>请假原因</td>
-</tr>
-</tbody>
-</table>
-<p>2、生活学习消费</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/payment</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>number</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>payTime</td>
-<td>date</td>
-<td>消费时间</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>number</td>
-<td>消费或充值金额</td>
-</tr>
-</tbody>
-</table>
-<p>（7）学生个人信息的统计汇入统计数据库</p>
-<p>（8）学生各种信息的查询统计、综合绩分的计算（可自行设计公式）和学生个人画像、个人简历的生成打印</p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">----&gt; <span class="keyword">to</span> be continued</span><br></pre></td></tr></table></figure>
+<h1>一、目的</h1>
+<p>我现在已经在给定的项目中完成了后端的开发，并使用React框架重写了前端。于是开始着手将前后端上线服务器。虽然在本地一切正常，但在上线之后，我们的后端并不能正常完成身份验证，即使是登录注册请求也会报401。于是，我开始着手重写后端。</p>
+<h1>二、准备工作</h1>
+<h2 id="1、软件">1、软件</h2>
+<p>开发环境IDEA，前端测试postman，数据库phpstudy（小皮）</p>
+<h2 id="2、框架">2、框架</h2>
+<p>前端：第一版React，第二版Vue(可能)</p>
+<p>后端：Spring Boot + Mybatise plus</p>
+<h1>三、项目具体</h1>
+<h2 id="1、使用token">1、使用token</h2>
+<p>先定义了JwtUtils工具类，具体实现如下。</p>
+<h3 id="（1）生成token">（1）生成token</h3>
+<p>JWT 最常见的几种签名算法(JWA)有HS256(HMAC-SHA256) 、RS256(RSA-SHA256) 还有 ES256(ECDSA-SHA256)。这里我们使用的是HS256。</p>
+<ol>
+<li>HS256 使用同一个「secret_key」进行签名与验证（对称加密）。一旦 secret_key 泄漏，就毫无安全性可言了。
+<ul>
+<li>因此 HS256 只适合集中式认证，签名和验证都必须由可信方进行。</li>
+<li>传统的单体应用广泛使用这种算法，但是请不要在任何分布式的架构中使用它！</li>
+</ul>
+</li>
+<li>RS256 是使用 RSA 私钥进行签名，使用 RSA 公钥进行验证。公钥即使泄漏也毫无影响，只要确保私钥安全就行。
+<ul>
+<li>RS256 可以将验证委托给其他应用，只要将公钥给他们就行。</li>
+</ul>
+</li>
+<li>ES256 和 RS256 一样，都使用私钥签名，公钥验证。算法速度上差距也不大，但是它的签名长度相对短很多（省流量），并且算法强度和 RS256 差不多。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">createToken</span><span class="params">(String id,String userName)</span></span>&#123;</span><br><span class="line">        Map&lt;String,Object&gt; header = <span class="keyword">new</span> HashMap();</span><br><span class="line">        header.put(<span class="string">&quot;typ&quot;</span>,<span class="string">&quot;JWT&quot;</span>);</span><br><span class="line">        header.put(<span class="string">&quot;alg&quot;</span>,<span class="string">&quot;HS256&quot;</span>);</span><br><span class="line">        JwtBuilder builder = Jwts.builder().setHeader(header)</span><br><span class="line">                .setId(id)</span><br><span class="line">                .setExpiration(<span class="keyword">new</span> Date(System.currentTimeMillis()+EXPIRE_TIME))</span><br><span class="line">                .setSubject(userName)</span><br><span class="line">                .setIssuedAt(<span class="keyword">new</span> Date())</span><br><span class="line">                .signWith(SignatureAlgorithm.HS256,KEY);</span><br><span class="line">        <span class="keyword">return</span> builder.compact();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>从代码中可以看出，token中所携带的信息有用户id、用户名、现在的时间、token过期时间还有密钥。</p>
+<h3 id="（2）token的验证">（2）token的验证</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">verify</span><span class="params">(String token)</span></span>&#123;</span><br><span class="line">        Claims claims = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//token过期后，会抛出ExpiredJwtException 异常，通过这个来判定token过期，</span></span><br><span class="line">            claims = Jwts.parser().setSigningKey(KEY).parseClaimsJws(token).getBody();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (ExpiredJwtException e)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//从token中获取用户id，查询该Id的用户是否存在，存在则token验证通过</span></span><br><span class="line">        Integer id = Integer.parseInt(claims.getId());</span><br><span class="line">        <span class="comment">//这是防止空指针的操作</span></span><br><span class="line">        String username = JwtUitls.userService.getName(id);</span><br><span class="line">        <span class="keyword">if</span>(username != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（3）使用时注意空指针">（3）使用时注意空指针</h3>
+<p>因为这里使用了UserService的查询用户的服务，</p>
+<p>而且因为这是工具类，在controller之前执行，即使使用自动注入的注解也会报空指针的错误。解决办法如下。</p>
+<p>&lt;1&gt;JwtUtils类名前使用@Component注解</p>
+<p>&lt;2&gt;使用UserService时使用@Resource注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> UserService userService;</span><br></pre></td></tr></table></figure>
+<p>&lt;3&gt;声明自己的静态对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> JwtUitls JwtUitls;</span><br></pre></td></tr></table></figure>
+<p>&lt;4&gt;使用@PostConstruct初始化新建的静态对象。</p>
+<p>被@PostConstruct注解的方法，在对象加载完依赖注入后执行。也就是说这个方法在依赖加载后，对象使用前执行，而且只执行一次</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostConstruct</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    JwtUitls = <span class="keyword">this</span>;</span><br><span class="line">    JwtUitls.userService = <span class="keyword">this</span>.userService;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&lt;5&gt;使用服务时，调用静态对象的服务</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String username = JwtUitls.userService.getName(id);</span><br></pre></td></tr></table></figure>
+<p>这样，我们就可以使用这个类进行token的创建和验证了，接下来就可以进行身份验证操作了。</p>
+<h2 id="2、身份验证">2、身份验证</h2>
+<p>不像第一版的项目里先进入到controller在验证身份一样，这一版的身份验证加在了filter过滤器里。</p>
+<p>新建IdentityFilter类，并实现Filter接口，覆盖doFilter方法。</p>
+<p>首先，获得请求的url来判断是否要放行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String url = ((HttpServletRequest) servletRequest).getRequestURI();</span><br></pre></td></tr></table></figure>
+<p>如果是登录或注册的请求，则直接放行。否则，进一步验证token.</p>
+<p>&lt;1&gt;获取token</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String token = ((HttpServletRequest) servletRequest).getHeader(<span class="string">&quot;token&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>&lt;2&gt;使用JwtUtils里的verify方法验证</p>
+<p>&lt;3&gt;放行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filterChain.doFilter(servletRequest, servletResponse);</span><br></pre></td></tr></table></figure>
+<p>filterChain、servletRequest、servletResponse均为doFilter方法的固定参数。</p>
+<p>&lt;4&gt;扫尾</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">JSONObject jsonObject = <span class="keyword">new</span> JSONObject(map);</span><br><span class="line">servletResponse.setContentType(<span class="string">&quot;application/json&quot;</span>);</span><br><span class="line"><span class="comment">//设置响应的编码</span></span><br><span class="line">servletResponse.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line"><span class="comment">//响应</span></span><br><span class="line">PrintWriter pw = servletResponse.getWriter();</span><br><span class="line">pw.write(jsonObject.toString());</span><br><span class="line">pw.flush();</span><br><span class="line">pw.close();</span><br></pre></td></tr></table></figure>
+<h2 id="3、跨域">3、跨域</h2>
+<p>日后，我们的项目是一定要跑在服务器上的，而前后端交流也必然少不了跨域。</p>
+<p>据我所知，只要协议、端口、域名三者任意一个不同，就会产生跨域问题。而同样，在前端、服务器、后端三种任意一个添加跨域设置即可实现跨域。</p>
+<h3 id="前端：">前端：</h3>
+<p>对于前端有9种方法：</p>
+<p>1、 通过jsonp跨域<br>
+2、 document.domain + iframe跨域<br>
+3、 location.hash + iframe<br>
+4、 <a target="_blank" rel="noopener" href="http://window.name">window.name</a> + iframe跨域<br>
+5、 postMessage跨域<br>
+6、 跨域资源共享（CORS）<br>
+7、 nginx代理跨域<br>
+8、 nodejs中间件代理跨域<br>
+9、 WebSocket协议跨域</p>
+<h3 id="服务器：">服务器：</h3>
+<p>可以设置反向代理，将本机设为反向代理服务器，将url的请求转到另一个url处。我们的服务器使用的是nginx，就以nginx为例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">      listen <span class="number">80</span>;                         </span><br><span class="line">      server_name test1.xqiangme.top;  </span><br><span class="line"></span><br><span class="line">      #允许跨域请求的域，* 代表所有</span><br><span class="line">      add_header <span class="string">&#x27;Access-Control-Allow-Origin&#x27;</span> *;</span><br><span class="line">      #允许带上cookie请求</span><br><span class="line">      add_header <span class="string">&#x27;Access-Control-Allow-Credentials&#x27;</span> <span class="string">&#x27;true&#x27;</span>;</span><br><span class="line">      #允许请求的方法，比如 GET/POST/PUT/DELETE</span><br><span class="line">      add_header <span class="string">&#x27;Access-Control-Allow-Methods&#x27;</span> *;</span><br><span class="line">      #允许请求的header</span><br><span class="line">      add_header <span class="string">&#x27;Access-Control-Allow-Headers&#x27;</span> *;</span><br><span class="line"></span><br><span class="line">      location /index.html &#123;</span><br><span class="line">      alias /home/nginx/static_html/index_test1.html;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="后端">后端</h3>
+<p>首先在controller处加入跨域的注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@CrossOrigin(origins = &quot;*&quot;)</span></span><br></pre></td></tr></table></figure>
+<p>设置过滤器，自定义过滤器，实现Filter接口，将下面的部分加入到doFilter方法中即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HttpServletResponse response = (HttpServletResponse) servletResponse;</span><br><span class="line">response.setHeader(<span class="string">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="string">&quot;*&quot;</span>);</span><br><span class="line">response.setHeader(<span class="string">&quot;Access-Control-Allow-Methods&quot;</span>, <span class="string">&quot;POST, GET, OPTIONS, DELETE&quot;</span>);</span><br><span class="line">response.setHeader(<span class="string">&quot;Access-Control-Max-Age&quot;</span>, <span class="string">&quot;3600&quot;</span>);</span><br><span class="line">response.setHeader(<span class="string">&quot;Access-Control-Allow-Headers&quot;</span>, <span class="string">&quot;content-type,Authorization&quot;</span>);</span><br><span class="line">filterChain.doFilter(servletRequest, servletResponse);</span><br></pre></td></tr></table></figure>
+<h2 id="4、安全">4、安全</h2>
+<h3 id="密码加密与解密">密码加密与解密</h3>
+<p>新建SecurityUtil，使用BCryptPasswordEncoder类进行加密与解密。</p>
+<h2 id="5、内部数据处理">5、内部数据处理</h2>
+<p>流程：controller层接收数据调用service层，service层实现大部分逻辑并调用Mapper，Mapper层调用数据库操作。在yml文件里，配置操作数据库时，要扫描哪个文件，获取sql语句来操作数据库。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath*:/mapper/**Mapper.xml</span></span><br></pre></td></tr></table></figure>
+<p>我敲代码的流程如下：</p>
+<h3 id="（1）Bean类">（1）Bean类</h3>
+<p>使用@Data注解，必要时设置构造方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（2）Mapper类">（2）Mapper类</h3>
+<p>对应的数据库操作方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> <span class="keyword">extends</span> <span class="title">BaseMapper</span>&lt;<span class="title">User</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">getNameById</span><span class="params">(Integer id)</span></span>;</span><br><span class="line">    <span class="function">String <span class="title">getPwdById</span><span class="params">(Integer id)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">addUser</span><span class="params">(User user)</span></span>;</span><br><span class="line">    <span class="function">Integer <span class="title">getIdByName</span><span class="params">(String username)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（3）写SQL">（3）写SQL</h3>
+<p>在/mapper/**Mapper.xml下，写SQL，这是我写的增删改查的例子。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span> <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.example.test.mapper.SomethingMapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;func1InMapper&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.String&quot;</span>&gt;</span></span><br><span class="line">        SELECT</span><br><span class="line">            tb.col_name</span><br><span class="line">        FROM</span><br><span class="line">            table_name tb</span><br><span class="line">        WHERE</span><br><span class="line">            tb.id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;func2InMapper&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;com.example.test.bean.Student&quot;</span>&gt;</span></span><br><span class="line">        SELECT</span><br><span class="line">            *</span><br><span class="line">        FROM</span><br><span class="line">            table stu</span><br><span class="line">        WHERE</span><br><span class="line">            stu.id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;func3InMapper&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;com.example.test.bean.Student&quot;</span>&gt;</span></span><br><span class="line">        UPDATE stu_base_info</span><br><span class="line">        SET student_name = #&#123;studentName&#125;,student_num = #&#123;studentNum&#125;,sex = #&#123;sex&#125;,age = #&#123;age&#125;,</span><br><span class="line">            birthday = #&#123;birthday&#125;,telephone = #&#123;telephone&#125;</span><br><span class="line">        WHERE id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;func4InMapper&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;id&quot;</span> <span class="attr">useGeneratedKeys</span>=<span class="string">&quot;true&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;com.example.test.bean.Student&quot;</span>&gt;</span></span><br><span class="line">        INSERT INTO stu_base_info(student_name,student_num,sex,age,birthday,telephone)</span><br><span class="line">        VALUES (#&#123;studentName&#125;,#&#123;studentNum&#125;,#&#123;sex&#125;,#&#123;age&#125;,#&#123;birthday&#125;,#&#123;telephone&#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">&quot;func5InMapper&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;com.example.test.bean.Student&quot;</span>&gt;</span></span><br><span class="line">        DELETE FROM stu_base_info</span><br><span class="line">        WHERE id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="（4）Service的接口">（4）Service的接口</h3>
+<p>没什么好说的</p>
+<h3 id="（5）实现Service接口的类">（5）实现Service接口的类</h3>
+<p>这是主要逻辑的呈现的地方</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentServiceImpl</span> <span class="keyword">implements</span> <span class="title">StudentService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    StudentMapper studentMapper;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="（6）在controller里调用service即可">（6）在controller里调用service即可</h3>
+<p>注意：controller里不要太过臃肿，不要写太多的逻辑，让分发器就是分发器，让它们各司其职，让它们尽量解耦。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@CrossOrigin(origins = &quot;*&quot;)</span></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AuthController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/login&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Map&lt;String,String&gt; <span class="title">login</span><span class="params">(String username,String password)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userService.handleLogin(username,password);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/signup&quot;)</span></span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Map&lt;String,String&gt; <span class="title">signup</span><span class="params">(String username, String password)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userService.addUser(username,password);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6、增删改查时踩过的坑">6、增删改查时踩过的坑</h2>
+<h3 id="（1）空指针">（1）空指针</h3>
+<p>在update前，首先要判断是否已有该信息，若没有，则空指针。</p>
+<p>在delete后，再查询信息时，要先判断是否为空，否则也会有空指针。</p>
+<h3 id="（2）其他">（2）其他</h3>
+<p>&lt;1&gt;update覆盖bug，要逐一确认是否有新参数，将旧值覆盖。</p>
+<p>&lt;2&gt;BCryptPasswordEncoder这个类存在于springboot-starter-security和spring-security-core这两个依赖中。但是，导入前者会导致任何请求都无权限，经我debug测试，它甚至会在我定义的filter前把请求给拦截下来；后一个依赖，是正常符合逻辑的。</p>
+<p>&lt;3&gt;涉及数据库的操作，经常出错，我一般都加个try-catch</p>
+<h3 id="（3）sql返回值">（3）sql返回值</h3>
+<p>单次insert成功时返回1，失败0</p>
+<p>select成功时返回值可自定义（resultType=java.lang.*)，失败会返回null</p>
+<p>delete的返回值可在mapper里定义，一般为0，1或true,false或void</p>
+<p>update返回值为记录数。</p>
 
 
         <hr>
@@ -992,9 +603,13 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/java-server-test/" data-toggle="tooltip" data-placement="top" title="java课设初看框架与疑问">&larr; Previous Post</a>
+            <a href="/cn/java-server-interface2/" data-toggle="tooltip" data-placement="top" title="java课设接口2">&larr; Previous Post</a>
           </li>
           
+          
+          <li class="next">
+            <a href="/cn/java-server-model2/" data-toggle="tooltip" data-placement="top" title="java课设保姆级教程2">Next Post &rarr;</a>
+          </li>
           
         </ul>
 
@@ -1042,7 +657,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=java课设接口1&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/java-server-interface1/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=java课设二周目阶段总结1&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/java-server-2-log1/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -1077,7 +692,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Fri Mar 04 2022 23:32:00 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Wed Mar 30 2022 23:34:17 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -1130,7 +745,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">（1）学生基本信息、联系方式、入学前信息、家庭信息、社会关系等基本信息的管理</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">（2）学习信息管理，包括课程基本信息，课程中心（教材、课件、参考资料等）选课信息、考勤信息、作业信息、成绩信息等</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%B9%E7%9B%AE%E5%BD%95%EF%BC%9A-study"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">根目录：&#x2F;study</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E8%AF%BE%E7%A8%8B%E4%B8%AD%E5%BF%83"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">1、课程中心</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E9%80%89%E8%AF%BE%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">2、选课信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E8%80%83%E5%8B%A4%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">3、考勤信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E4%BD%9C%E4%B8%9A%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">2.1.4.</span> <span class="toc-nav-text">4、作业信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E6%88%90%E7%BB%A9%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">2.1.5.</span> <span class="toc-nav-text">5、成绩信息</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">（3）学生社会实践、学科竞赛、科技成果、培训讲座、创新项目、校外实习等创新实践信息管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%B9%E7%9B%AE%E5%BD%95%EF%BC%9A-practice"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">根目录：&#x2F;practice</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">（4）学生荣誉信息管理，包括获得的各种称号奖励等</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%AE%E5%BD%95%EF%BC%9A-honor%EF%BC%88%E6%B2%A1%E6%9C%89%E5%AD%90%E7%9B%AE%E5%BD%95%EF%BC%89"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">目录：&#x2F;honor（没有子目录）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">（5）学生体育活动、外出旅游、文艺演出、聚会、等日常活动管理。</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%B9%E7%9B%AE%E5%BD%95%EF%BC%9A-daily"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">根目录：&#x2F;daily</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">（6）学生外出请假信息和生活学习消费等日志信息管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%B9%E7%9B%AE%E5%BD%95%EF%BC%9A-log"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">根目录：&#x2F;log</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、目的</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、准备工作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E8%BD%AF%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、软件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E6%A1%86%E6%9E%B6"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、框架</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、项目具体</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8token"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、使用token</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%881%EF%BC%89%E7%94%9F%E6%88%90token"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">（1）生成token</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%882%EF%BC%89token%E7%9A%84%E9%AA%8C%E8%AF%81"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">（2）token的验证</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%883%EF%BC%89%E4%BD%BF%E7%94%A8%E6%97%B6%E6%B3%A8%E6%84%8F%E7%A9%BA%E6%8C%87%E9%92%88"><span class="toc-nav-number">3.1.3.</span> <span class="toc-nav-text">（3）使用时注意空指针</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2、身份验证</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3%E3%80%81%E8%B7%A8%E5%9F%9F"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3、跨域</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%89%8D%E7%AB%AF%EF%BC%9A"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">前端：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9A"><span class="toc-nav-number">3.3.2.</span> <span class="toc-nav-text">服务器：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8E%E7%AB%AF"><span class="toc-nav-number">3.3.3.</span> <span class="toc-nav-text">后端</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4%E3%80%81%E5%AE%89%E5%85%A8"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">4、安全</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86"><span class="toc-nav-number">3.4.1.</span> <span class="toc-nav-text">密码加密与解密</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5%E3%80%81%E5%86%85%E9%83%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">5、内部数据处理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%881%EF%BC%89Bean%E7%B1%BB"><span class="toc-nav-number">3.5.1.</span> <span class="toc-nav-text">（1）Bean类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%882%EF%BC%89Mapper%E7%B1%BB"><span class="toc-nav-number">3.5.2.</span> <span class="toc-nav-text">（2）Mapper类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%883%EF%BC%89%E5%86%99SQL"><span class="toc-nav-number">3.5.3.</span> <span class="toc-nav-text">（3）写SQL</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%884%EF%BC%89Service%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">3.5.4.</span> <span class="toc-nav-text">（4）Service的接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%885%EF%BC%89%E5%AE%9E%E7%8E%B0Service%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%B1%BB"><span class="toc-nav-number">3.5.5.</span> <span class="toc-nav-text">（5）实现Service接口的类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%886%EF%BC%89%E5%9C%A8controller%E9%87%8C%E8%B0%83%E7%94%A8service%E5%8D%B3%E5%8F%AF"><span class="toc-nav-number">3.5.6.</span> <span class="toc-nav-text">（6）在controller里调用service即可</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6%E3%80%81%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">6、增删改查时踩过的坑</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%881%EF%BC%89%E7%A9%BA%E6%8C%87%E9%92%88"><span class="toc-nav-number">3.6.1.</span> <span class="toc-nav-text">（1）空指针</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%882%EF%BC%89%E5%85%B6%E4%BB%96"><span class="toc-nav-number">3.6.2.</span> <span class="toc-nav-text">（2）其他</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%EF%BC%883%EF%BC%89sql%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-nav-number">3.6.3.</span> <span class="toc-nav-text">（3）sql返回值</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -1155,7 +770,9 @@
             
             <a class="tag" href="/tags/#spring boot" title="spring boot">spring boot</a>
             
-            <a class="tag" href="/tags/#jpa" title="jpa">jpa</a>
+            <a class="tag" href="/tags/#mybatis plus" title="mybatis plus">mybatis plus</a>
+            
+            <a class="tag" href="/tags/#mysql" title="mysql">mysql</a>
             
           </div>
         </section>

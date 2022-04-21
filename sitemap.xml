@@ -23,6 +23,34 @@
   </url>
   
   <url>
+    <loc>http://yoursite-url/cn/java-server-debuging/</loc>
+    
+    <lastmod>2022-04-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/cn/java-server-interface2/</loc>
+    
+    <lastmod>2022-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/cn/java-server-2-log1/</loc>
+    
+    <lastmod>2022-03-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/cn/java-server-model2/</loc>
+    
+    <lastmod>2022-03-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/cn/java-server-model/</loc>
     
     <lastmod>2022-03-16</lastmod>
@@ -30,14 +58,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/java-server-interface1/</loc>
+    <loc>http://yoursite-url/cn/java-server-test/</loc>
     
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-03-14</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/java-server-interface2/</loc>
+    <loc>http://yoursite-url/cn/java-server-interface1/</loc>
     
     <lastmod>2022-03-04</lastmod>
     
@@ -75,6 +103,27 @@
   
   <url>
     <loc>http://yoursite-url/tags/jpa/</loc>
+    <lastmod>2022-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/mybatis-plus/</loc>
+    <lastmod>2022-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/mysql/</loc>
+    <lastmod>2022-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/%E8%B7%A8%E5%9F%9F/</loc>
     <lastmod>2022-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
