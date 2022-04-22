@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/">
+  <link rel="canonical" href="http://yoursite-url/cn/java-server-aliyun/">
   <title>
     
-      LHS的矩形海
+      java课设上线服务器 - LHS的矩形海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -300,29 +300,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="cn/index.html">
-      
-      
-      <option value="en" >
-        English
-      </option>
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -374,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
     }
 
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/newhome_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
       
     }
 
@@ -408,10 +386,52 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>LHS的矩形海</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">我会尽量发一些有趣的东西</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#mysql" title="mysql">mysql</a>
+              
+              <a class="tag" href="/tags/#阿里云" title="阿里云">阿里云</a>
+              
+              <a class="tag" href="/tags/#ubuntu" title="ubuntu">ubuntu</a>
+              
+              <a class="tag" href="/tags/#nginx" title="nginx">nginx</a>
+              
+              <a class="tag" href="/tags/#数据库" title="数据库">数据库</a>
+              
+              <a class="tag" href="/tags/#react" title="react">react</a>
+              
+            </div>
+            <h1>java课设上线服务器</h1>
+            <h2 class="subheading">A succinct hexo theme...</h2>
+            <span class="meta">
+              Posted by lhs on
+              2022-04-22
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">3</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -452,650 +472,322 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <blockquote>
+<p>（首先声明，我是第一次上手的小白，此文多有谬误）</p>
+<p>我将做成的项目搭在了阿里云服务器上，一段辛酸的故事由此开始……</p>
+<p>成品<a target="_blank" rel="noopener" href="http://47.111.81.251">在此</a></p>
+</blockquote>
+<h1>1.准备工作</h1>
+<p>为了让我的项目运行在服务器上，我先向学长要了一台他不用了的云服务器，当然上面有很多东西，我不知道哪些是必要的哪些是可以删除的。</p>
+<p>现在，我会什么呢？我会用FileZilla和cmd的ssh命令远程链接服务器。这是，咱当然不知道还有一个阿里云的控制台，当然也不知道阿里云也有一个防火墙了（伏笔）。</p>
+<h1>2.第二次尝试</h1>
+<h2 id="2-1第一次呢">2.1第一次呢</h2>
+<p>在此之前，俺们曾经把旧的后端上线过一次服务器。就出现了很多问题，大体概括就是：本地跑，怎么跑怎么对；一上线，各种4XX，5XX。俺很无奈，在一次例会结束后，请了很多学长来帮忙看看。由于后端的安全验证（老师写的，想让我们多了解一下）过于复杂，一时间说不清道不明，没想到直到清风徐徐，送来落日的余晖，钟声六响，带走翻飞的思绪，一干人等得出了最终定论：<strong>重写</strong>。</p>
+<h2 id="2-2再战阿里云">2.2再战阿里云</h2>
+<h3 id="2-2-1问题1">2.2.1问题1</h3>
+<p>这一次我把身份验证放在了过滤器里，使用对称加密。应该可以了吧。</p>
+<p>结果是拒绝访问，即前端无法请求到后端。</p>
+<h3 id="2-2-2漫长的修行">2.2.2漫长的修行</h3>
+<p>我主要的时间都在这个问题上消耗了，为了排除服务器配置的问题，我终于去申请了属于自己的服务器，想从头搭起。</p>
+<p>于是开始按照网上的帖子，一步步部署服务器</p>
+<p>安装nginx：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install nginx</span><br><span class="line">service nginx start</span><br></pre></td></tr></table></figure>
+<p>安装jdk：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install java-1.8.0-openjdk</span><br></pre></td></tr></table></figure>
+<p>关闭防火墙：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw app list</span><br><span class="line">sudo ufw allow &#x27;Nginx Full&#x27;</span><br></pre></td></tr></table></figure>
+<p>上传前端：</p>
+<p>react项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<p>将build文件夹下的东西上传到服务器/var/www/html下即可。当然如果要个性定制图标、标题的话，可以修改配置再上传。</p>
+<p>这里我用的是FileZilla，感觉挺好用的。</p>
+<p>运行jar包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar /stu_sys_project/admin-java.jar &amp;</span><br></pre></td></tr></table></figure>
+<p>一套行云流水之后，去测试一下，依然是同样的报错。</p>
+<p>俺一直以为要在服务器的config文件里配置，就可以解决。看了很长时间才明白，这个是做代理转发的。可我这个前端和后端在同一台计算机上。虽然说配置上监听后端端口的server块之后不显示找不到了，可是拦截到之后要转发到哪里呢？转发到本机吗，这又回到了问题的起点。这里我好像是不小心把后端进程停了，还是什么，记不清了</p>
+<p>安全组：</p>
+<p>阿里云还有一个防火墙，要配置安全组，我把前后端、数据库端口都配上。再次请求，依然错误。</p>
+<p>前端写错了：</p>
+<p><img src="neterror.png" alt="neterror"></p>
+<p>本地开发的时候，请求user都是localhost，上线后要用公网ip</p>
+<p>排查一遍后，将后端重启，前端再次请求。</p>
+<p>前端终于访问到后端了，但是hikari连接池断开了。</p>
+<p><img src="hikari.png" alt="hikari"></p>
+<h3 id="2-2-3问题2">2.2.3问题2</h3>
+<p>你可能注意到我始终没有安装配置mysql，实际上我配好了，只不过忽略了。检查mysql的状态，一切正常。</p>
+<p>一般来说，是后端yml文件配置错误。</p>
+<p>有这么几种情况：</p>
+<p>1.时区问题，设置成Asia/Shanghai就行</p>
+<p>2.账号密码错误</p>
+<p>3.总之是url有问题啦</p>
+<p>我排查了很多遍（指一个下午），确实没问题。</p>
+<p>这时俺比较恼火，一气之下去申请了云数据库。您猜怎么着，它居然不报错了。</p>
+<p><img src="projct2.png" alt="projct2"></p>
+<p><img src="project1.png" alt="project1"></p>
+<h1>3.后续</h1>
+<p>至此，服务器部署成功。</p>
+<p>之后又实现了多对多的数据库关系，下一篇写。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/java-server-debuging/" data-toggle="tooltip" data-placement="top" title="java课设二周目踩坑">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=java课设上线服务器&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/java-server-aliyun/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Fri Apr 22 2022 08:34:26 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.准备工作</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.第二次尝试</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%91%A2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1第一次呢</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2%E5%86%8D%E6%88%98%E9%98%BF%E9%87%8C%E4%BA%91"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2再战阿里云</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-1%E9%97%AE%E9%A2%981"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">2.2.1问题1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-2%E6%BC%AB%E9%95%BF%E7%9A%84%E4%BF%AE%E8%A1%8C"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">2.2.2漫长的修行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-3%E9%97%AE%E9%A2%982"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">2.2.3问题2</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.后续</span></a></li></ol>
+        
+        </div>
+      </aside>
     
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
+
+
+      <!-- Sidebar Container -->
+      <div class="
                 col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-      <!-- Main Content -->
-
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-aliyun/">
-    <h2 class="post-title">
-      java课设上线服务器
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-（首先声明，我是第一次上手的小白，此文多有谬误）
-我将做成的项目搭在了阿里云服务器上，一段辛酸的故事由此开始……
-成品在此
-
-1.准备工作
-为了让我的项目运行在服务器上，我先向学长要了一台他不用了的云服务器，当然上面有很多东西，我不知道哪些是必要的哪些是可以删除的。
-现在，我会什么呢？我会用FileZilla和cmd的ssh命令远程链接服务器。这是，咱当然不知道还有一个阿里云的控制台，当然......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-04-22
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#mysql" title="mysql">mysql</a>
-    
-    <a href="/tags/#阿里云" title="阿里云">阿里云</a>
-    
-    <a href="/tags/#ubuntu" title="ubuntu">ubuntu</a>
-    
-    <a href="/tags/#nginx" title="nginx">nginx</a>
-    
-    <a href="/tags/#数据库" title="数据库">数据库</a>
-    
-    <a href="/tags/#react" title="react">react</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-debuging/">
-    <h2 class="post-title">
-      java课设二周目踩坑
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-这是我二周目的踩坑。
-
-二周目踩坑
-1、你永远想不到SQL语句里有什么关键字，下一次再报param not match，直接先改名再说。（痛哭
-2.token加不到header里，可能是跨域的问题，
-12response.setHeader(&quot;Access-Control-Allow-Headers&quot;, &quot;content-type,Authorization,......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-04-04
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
-    
-    <a href="/tags/#mysql" title="mysql">mysql</a>
-    
-    <a href="/tags/#跨域" title="跨域">跨域</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-interface2/">
-    <h2 class="post-title">
-      java课设接口2
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-这是我们组二周目做后端时，用的接口。
-这一次，我们重写了后端，使用spring boot + mybatis plus框架。
-数据库也从sqlite变成了mysql
-前端也进行了一轮优化。
-
-（1）学生基本信息、联系方式、入学前信息、家庭信息、社会关系等基本信息的管理
-1url : teach/studentEditSubmit
-
-
-
-参数
-类型
-意义
-
-
-
-
-id
-number
-主键
-
-......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-04-02
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
-    
-    <a href="/tags/#mybatis plus" title="mybatis plus">mybatis plus</a>
-    
-    <a href="/tags/#mysql" title="mysql">mysql</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-2-log1/">
-    <h2 class="post-title">
-      java课设二周目阶段总结1
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-这一阶段我80%的错误都是sql写错了
-sql语句一生之敌。
-
-一、目的
-我现在已经在给定的项目中完成了后端的开发，并使用React框架重写了前端。于是开始着手将前后端上线服务器。虽然在本地一切正常，但在上线之后，我们的后端并不能正常完成身份验证，即使是登录注册请求也会报401。于是，我开始着手重写后端。
-二、准备工作
-1、软件
-开发环境IDEA，前端测试postman，数据库phpstu......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-03-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
-    
-    <a href="/tags/#mybatis plus" title="mybatis plus">mybatis plus</a>
-    
-    <a href="/tags/#mysql" title="mysql">mysql</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-model2/">
-    <h2 class="post-title">
-      java课设保姆级教程2
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-这是我们组一周目做后端时，用的文档2.0。
-我知道，十分简陋。没有多对多，没有复杂的逻辑，只实现了基本功能。
-修了一些bug
-
-1、models文件夹下建实体类
-12345678910@Entity@Table(	name = &quot;repositoryName&quot;)//数据库对应的表名public class ClassName &#123;    @Id    priva......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-03-19
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
-    
-    <a href="/tags/#jpa" title="jpa">jpa</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-model/">
-    <h2 class="post-title">
-      java课设保姆级教程1
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-这是我们组一周目做后端时，用的文档。
-我知道，十分简陋。没有多对多，没有复杂的逻辑，只实现了基本功能。
-
-1、models文件夹下建实体类
-12345678910@Entity@Table(	name = &quot;repositoryName&quot;)//数据库对应的表名public class ClassName &#123;    @Id    private Integer ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-03-16
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
-    
-    <a href="/tags/#jpa" title="jpa">jpa</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-test/">
-    <h2 class="post-title">
-      java课设初看框架与疑问
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-这是我们组一周目刚刚上手的时候，对后端的测试，与做的一些设想
-
-一、提交成绩
-有BUG，就算是老师自己写的例子也请求错误
-请求地址：
-12http://localhost:9090/api/html/submitAchievementhttp://localhost:9090/api/html/submitFormInfo
-提交成绩，后端无响应，八成要我们自己写
-1submitAchiev......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-03-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
-    
-    <a href="/tags/#jpa" title="jpa">jpa</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/java-server-interface1/">
-    <h2 class="post-title">
-      java课设接口1
-    </h2>
-    <h3 class="post-subtitle">
-      A succinct hexo theme...
-    </h3>
-    <div class="post-content-preview">
-      
-这是我们组一周目做后端时，用的接口。
-因为是重写了前端，所以有较大的发挥空间，于是制定了组内统一的接口。
-
-（1）学生基本信息、联系方式、入学前信息、家庭信息、社会关系等基本信息的管理
-1url : teach/studentEditSubmit
-
-
-
-参数
-类型
-意义
-
-
-
-
-id
-number
-主键
-
-
-studentName
-String
-学生姓名
-
-
-studentNum
-numb......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by lhs on
-    2022-03-04
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
-    
-    <a href="/tags/#jpa" title="jpa">jpa</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    
-  </ul>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
-        <hr>
-    
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#mysql" title="mysql">mysql</a>
+            
+            <a class="tag" href="/tags/#阿里云" title="阿里云">阿里云</a>
+            
+            <a class="tag" href="/tags/#ubuntu" title="ubuntu">ubuntu</a>
+            
+            <a class="tag" href="/tags/#nginx" title="nginx">nginx</a>
+            
+            <a class="tag" href="/tags/#数据库" title="数据库">数据库</a>
+            
+            <a class="tag" href="/tags/#react" title="react">react</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#spring boot" title="spring boot" rel="7">spring boot</a>
-    
-    
-    
-    <a href="/tags/#jpa" title="jpa" rel="4">jpa</a>
-    
-    
-    
-    <a href="/tags/#mybatis plus" title="mybatis plus" rel="2">mybatis plus</a>
-    
-    
-    
-    <a href="/tags/#mysql" title="mysql" rel="4">mysql</a>
-    
-    
-    
-    <a href="/tags/#跨域" title="跨域" rel="1">跨域</a>
-    
-    
-    
-    <a href="/tags/#阿里云" title="阿里云" rel="1">阿里云</a>
-    
-    
-    
-    <a href="/tags/#ubuntu" title="ubuntu" rel="1">ubuntu</a>
-    
-    
-    
-    <a href="/tags/#nginx" title="nginx" rel="1">nginx</a>
-    
-    
-    
-    <a href="/tags/#数据库" title="数据库" rel="1">数据库</a>
-    
-    
-    
-    <a href="/tags/#react" title="react" rel="1">react</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/miku.png" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>miku miku sing&amp;dance!</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/half-tooth">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://twitter.com/half-tooth">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.instagram.com/half-tooth">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="http://weibo.com/WVincen">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="java-server-aliyun/">
-      <li>java课设上线服务器</li>
-    </a>
-    
-    <a href="java-server-debuging/">
-      <li>java课设二周目踩坑</li>
-    </a>
-    
-    <a href="java-server-interface2/">
-      <li>java课设接口2</li>
-    </a>
-    
-    <a href="java-server-2-log1/">
-      <li>java课设二周目阶段总结1</li>
-    </a>
-    
-    <a href="java-server-model2/">
-      <li>java课设保姆级教程2</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://zwn2001.github.io/" target="_blank">zwn</a></li>
-  
-  <li><a href="http://47.100.74.245/" target="_blank">gsr</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链友</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/04/">April 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/03/">March 2022</a><span class="archive-list-count">5</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#Java课设2021">
-      <li>Java课设2021</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="https://zwn2001.github.io/" target="_blank">zwn</a>
+          </li>
+          
+          <li>
+            <a href="http://47.100.74.245/" target="_blank">gsr</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
