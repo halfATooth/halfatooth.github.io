@@ -516,11 +516,10 @@
 <p>安全组：</p>
 <p>阿里云还有一个防火墙，要配置安全组，我把前后端、数据库端口都配上。再次请求，依然错误。</p>
 <p>前端写错了：</p>
-<p><img src="neterror.png" alt="neterror"></p>
+<p><img src="D:%5CVSCode-workspace%5Chexo_test%5Cblog%5Csource_posts%5Ccn%5Cjava-server-aliyun%5Cneterror.png" alt="neterror"></p>
 <p>本地开发的时候，请求user都是localhost，上线后要用公网ip</p>
 <p>排查一遍后，将后端重启，前端再次请求。</p>
 <p>前端终于访问到后端了，但是hikari连接池断开了。</p>
-<p><img src="hikari.png" alt="hikari"></p>
 <h3 id="2-2-3问题2">2.2.3问题2</h3>
 <p>你可能注意到我始终没有安装配置mysql，实际上我配好了，只不过忽略了。检查mysql的状态，一切正常。</p>
 <p>一般来说，是后端yml文件配置错误。</p>
@@ -530,8 +529,6 @@
 <p>3.总之是url有问题啦</p>
 <p>我排查了很多遍（指一个下午），确实没问题。</p>
 <p>这时俺比较恼火，一气之下去申请了云数据库。您猜怎么着，它居然不报错了。</p>
-<p><img src="projct2.png" alt="projct2"></p>
-<p><img src="project1.png" alt="project1"></p>
 <h1>3.后续</h1>
 <p>至此，服务器部署成功。</p>
 <p>之后又实现了多对多的数据库关系，下一篇写。</p>
