@@ -485,12 +485,18 @@
 <p>我将做成的项目搭在了阿里云服务器上，一段辛酸的故事由此开始……</p>
 <p>成品<a target="_blank" rel="noopener" href="http://47.111.81.251">在此</a></p>
 </blockquote>
-<h1 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h1><p>为了让我的项目运行在服务器上，我先向学长要了一台他不用了的云服务器，当然上面有很多东西，我不知道哪些是必要的哪些是可以删除的。</p>
+<h1>1.准备工作</h1>
+<p>为了让我的项目运行在服务器上，我先向学长要了一台他不用了的云服务器，当然上面有很多东西，我不知道哪些是必要的哪些是可以删除的。</p>
 <p>现在，我会什么呢？我会用FileZilla和cmd的ssh命令远程链接服务器。这是，咱当然不知道还有一个阿里云的控制台，当然也不知道阿里云也有一个防火墙了（伏笔）。</p>
-<h1 id="2-第二次尝试"><a href="#2-第二次尝试" class="headerlink" title="2.第二次尝试"></a>2.第二次尝试</h1><h2 id="2-1第一次呢"><a href="#2-1第一次呢" class="headerlink" title="2.1第一次呢"></a>2.1第一次呢</h2><p>在此之前，俺们曾经把旧的后端上线过一次服务器。就出现了很多问题，大体概括就是：本地跑，怎么跑怎么对；一上线，各种4XX，5XX。俺很无奈，在一次例会结束后，请了很多学长来帮忙看看。由于后端的安全验证（老师写的，想让我们多了解一下）过于复杂，一时间说不清道不明，没想到直到清风徐徐，送来落日的余晖，钟声六响，带走翻飞的思绪，一干人等得出了最终定论：<strong>重写</strong>。</p>
-<h2 id="2-2再战阿里云"><a href="#2-2再战阿里云" class="headerlink" title="2.2再战阿里云"></a>2.2再战阿里云</h2><h3 id="2-2-1问题1"><a href="#2-2-1问题1" class="headerlink" title="2.2.1问题1"></a>2.2.1问题1</h3><p>这一次我把身份验证放在了过滤器里，使用对称加密。应该可以了吧。</p>
+<h1>2.第二次尝试</h1>
+<h2 id="2-1第一次呢">2.1第一次呢</h2>
+<p>在此之前，俺们曾经把旧的后端上线过一次服务器。就出现了很多问题，大体概括就是：本地跑，怎么跑怎么对；一上线，各种4XX，5XX。俺很无奈，在一次例会结束后，请了很多学长来帮忙看看。由于后端的安全验证（老师写的，想让我们多了解一下）过于复杂，一时间说不清道不明，没想到直到清风徐徐，送来落日的余晖，钟声六响，带走翻飞的思绪，一干人等得出了最终定论：<strong>重写</strong>。</p>
+<h2 id="2-2再战阿里云">2.2再战阿里云</h2>
+<h3 id="2-2-1问题1">2.2.1问题1</h3>
+<p>这一次我把身份验证放在了过滤器里，使用对称加密。应该可以了吧。</p>
 <p>结果是拒绝访问，即前端无法请求到后端。</p>
-<h3 id="2-2-2漫长的修行"><a href="#2-2-2漫长的修行" class="headerlink" title="2.2.2漫长的修行"></a>2.2.2漫长的修行</h3><p>我主要的时间都在这个问题上消耗了，为了排除服务器配置的问题，我终于去申请了属于自己的服务器，想从头搭起。</p>
+<h3 id="2-2-2漫长的修行">2.2.2漫长的修行</h3>
+<p>我主要的时间都在这个问题上消耗了，为了排除服务器配置的问题，我终于去申请了属于自己的服务器，想从头搭起。</p>
 <p>于是开始按照网上的帖子，一步步部署服务器</p>
 <p>安装nginx：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install nginx</span><br><span class="line">service nginx start</span><br></pre></td></tr></table></figure>
@@ -514,8 +520,9 @@
 <p>本地开发的时候，请求user都是localhost，上线后要用公网ip</p>
 <p>排查一遍后，将后端重启，前端再次请求。</p>
 <p>前端终于访问到后端了，但是hikari连接池断开了。</p>
-<p><img src="hikari.png" alt="hikari"></p>
-<h3 id="2-2-3问题2"><a href="#2-2-3问题2" class="headerlink" title="2.2.3问题2"></a>2.2.3问题2</h3><p>你可能注意到我始终没有安装配置mysql，实际上我配好了，只不过忽略了。检查mysql的状态，一切正常。</p>
+<p><img src="hikarie.png" alt="hikari"></p>
+<h3 id="2-2-3问题2">2.2.3问题2</h3>
+<p>你可能注意到我始终没有安装配置mysql，实际上我配好了，只不过忽略了。检查mysql的状态，一切正常。</p>
 <p>一般来说，是后端yml文件配置错误。</p>
 <p>有这么几种情况：</p>
 <p>1.时区问题，设置成Asia/Shanghai就行</p>
@@ -525,7 +532,8 @@
 <p>这时俺比较恼火，一气之下去申请了云数据库。您猜怎么着，它居然不报错了。</p>
 <p><img src="projct2.png" alt="projct2"></p>
 <p><img src="project1.png" alt="project1"></p>
-<h1 id="3-后续"><a href="#3-后续" class="headerlink" title="3.后续"></a>3.后续</h1><p>至此，服务器部署成功。</p>
+<h1>3.后续</h1>
+<p>至此，服务器部署成功。</p>
 <p>之后又实现了多对多的数据库关系，下一篇写。</p>
 
 
@@ -672,7 +680,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.准备工作</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%9D%E8%AF%95"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.第二次尝试</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%91%A2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1第一次呢</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2%E5%86%8D%E6%88%98%E9%98%BF%E9%87%8C%E4%BA%91"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2再战阿里云</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-1%E9%97%AE%E9%A2%981"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">2.2.1问题1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-2%E6%BC%AB%E9%95%BF%E7%9A%84%E4%BF%AE%E8%A1%8C"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">2.2.2漫长的修行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-3%E9%97%AE%E9%A2%982"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">2.2.3问题2</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-%E5%90%8E%E7%BB%AD"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.后续</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.准备工作</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.第二次尝试</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%91%A2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1第一次呢</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2%E5%86%8D%E6%88%98%E9%98%BF%E9%87%8C%E4%BA%91"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2再战阿里云</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-1%E9%97%AE%E9%A2%981"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">2.2.1问题1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-2%E6%BC%AB%E9%95%BF%E7%9A%84%E4%BF%AE%E8%A1%8C"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">2.2.2漫长的修行</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-2-3%E9%97%AE%E9%A2%982"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">2.2.3问题2</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.后续</span></a></li></ol>
         
         </div>
       </aside>
