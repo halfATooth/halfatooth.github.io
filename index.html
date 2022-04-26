@@ -478,6 +478,46 @@
   <!-- top end -->
   
 
+  <a href="/cn/java-server-db/">
+    <h2 class="post-title">
+      java课设数据库关系
+    </h2>
+    <h3 class="post-subtitle">
+      A succinct hexo theme...
+    </h3>
+    <div class="post-content-preview">
+      
+我们对数据库的操作使用了两种框架：JPA和Mybatis plus。对这两种框架，我们都一一实现了一对一、一对多、多对一和多对多的数据库结构。
+
+1、总体感受总的来说，jpa因为写的注解多，所以更容易上手，而且尽量避免了书写sql语句，减少了出bug的可能性；但是代码的耦合度提高了，因为在实体类中要不可避免地出现有关数据库操作的代码，这就向实体类中添加了本不属于它的职责的逻辑，我认为这在一......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by lhs on
+    2022-04-26
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#spring boot" title="spring boot">spring boot</a>
+    
+    <a href="/tags/#jpa" title="jpa">jpa</a>
+    
+    <a href="/tags/#mybatis plus" title="mybatis plus">mybatis plus</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/java-server-aliyun/">
     <h2 class="post-title">
       java课设上线服务器
@@ -898,15 +938,15 @@ numb......
   <div class="tags">
     
     
-    <a href="/tags/#spring boot" title="spring boot" rel="7">spring boot</a>
+    <a href="/tags/#spring boot" title="spring boot" rel="8">spring boot</a>
     
     
     
-    <a href="/tags/#jpa" title="jpa" rel="4">jpa</a>
+    <a href="/tags/#jpa" title="jpa" rel="5">jpa</a>
     
     
     
-    <a href="/tags/#mybatis plus" title="mybatis plus" rel="2">mybatis plus</a>
+    <a href="/tags/#mybatis plus" title="mybatis plus" rel="3">mybatis plus</a>
     
     
     
@@ -1024,6 +1064,10 @@ numb......
 <div class="widget">
   <ul>
     
+    <a href="cn/java-server-db/">
+      <li>java课设数据库关系</li>
+    </a>
+    
     <a href="cn/java-server-aliyun/">
       <li>java课设上线服务器</li>
     </a>
@@ -1038,10 +1082,6 @@ numb......
     
     <a href="cn/java-server-2-log1/">
       <li>java课设二周目阶段总结1</li>
-    </a>
-    
-    <a href="cn/java-server-model2/">
-      <li>java课设保姆级教程2</li>
     </a>
     
   </ul>
@@ -1068,7 +1108,7 @@ numb......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/04/">April 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">5</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/04/">April 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">5</span></li></ul>
 </div>
 
 
@@ -1600,20 +1640,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
