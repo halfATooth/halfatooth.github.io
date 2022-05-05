@@ -465,6 +465,8 @@
         
         <a href="#Java课设2021" title="Java课设2021" rel="9">Java课设2021</a>
         
+        <a href="#大一期末复习" title="大一期末复习" rel="1">大一期末复习</a>
+        
       </div>
 
       <!-- 标签列表 -->
@@ -658,6 +660,35 @@
           <a href="/cn/java-server-db/">
             <h2 class="post-title">
               java课设数据库关系
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A succinct hexo theme...
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="大一期末复习">
+          <span class="tag-text">大一期末复习</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/cn/linear-review/">
+            <h2 class="post-title">
+              大一下线性代数期末复习
               
               -- cn
               
@@ -1182,5 +1213,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

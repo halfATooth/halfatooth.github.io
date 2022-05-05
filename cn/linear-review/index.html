@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/java-server-test/">
+  <link rel="canonical" href="http://yoursite-url/cn/linear-review/">
   <title>
     
-      java课设初看框架与疑问 - LHS的矩形海
+      大一下线性代数期末复习 - LHS的矩形海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -389,16 +389,14 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#spring boot" title="spring boot">spring boot</a>
-              
-              <a class="tag" href="/tags/#jpa" title="jpa">jpa</a>
+              <a class="tag" href="/tags/#线性代数" title="线性代数">线性代数</a>
               
             </div>
-            <h1>java课设初看框架与疑问</h1>
+            <h1>大一下线性代数期末复习</h1>
             <h2 class="subheading">A succinct hexo theme...</h2>
             <span class="meta">
               Posted by lhs on
-              2022-03-14
+              2022-05-05
             </span>
 
 
@@ -406,11 +404,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">2</span> Minutes
+              Estimated Reading Time <span class="post-count">13</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">560</span> In Total
+              Words <span class="post-count">2.8k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,67 +471,387 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <blockquote>
-<p>这是我们组一周目刚刚上手的时候，对后端的测试，与做的一些设想</p>
+<p>期末复习啊啊啊呜呜呜</p>
+<p>最基本的知识点</p>
 </blockquote>
-<h2 id="一、提交成绩">一、提交成绩</h2>
-<p>有BUG，就算是老师自己写的例子也请求错误</p>
-<p>请求地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//</span>localhost:<span class="number">9090</span><span class="regexp">/api/</span>html/submitAchievement</span><br><span class="line">http:<span class="regexp">//</span>localhost:<span class="number">9090</span><span class="regexp">/api/</span>html/submitFormInfo</span><br></pre></td></tr></table></figure>
-<p>提交成绩，后端无响应，八成要我们自己写</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">submitAchievement函数返回值为：<span class="string">&quot;姓名:&quot;</span>+<span class="built_in">name</span>+<span class="string">&quot;,数学:&quot;</span>+maths+<span class="string">&quot;，物理:&quot;</span>+physics</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数：</th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>String</td>
-</tr>
-<tr>
-<td>maths</td>
-<td>int</td>
-</tr>
-<tr>
-<td>physics</td>
-<td>int</td>
-</tr>
-</tbody>
-</table>
-<h2 id="二、简历">二、简历</h2>
-<p>原本的后端返回值</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="symbol">  code:</span><span class="string">&quot;0&quot;</span>,</span><br><span class="line"><span class="symbol">  data:</span></span><br><span class="line">  &#123;</span><br><span class="line"><span class="symbol">    data:</span></span><br><span class="line">      &#123;</span><br><span class="line"><span class="symbol">        attachList:</span></span><br><span class="line">          [</span><br><span class="line">            <span class="number">0</span>:&#123;content:<span class="string">&quot;成绩...&quot;</span>,title:<span class="string">&quot;学习成绩&quot;</span>&#125;</span><br><span class="line">            <span class="number">1</span>:&#123;content:<span class="string">&quot;社会实践...&quot;</span>,title:<span class="string">&quot;社会实践&quot;</span>&#125;</span><br><span class="line">          ]</span><br><span class="line"><span class="symbol">        myName:</span><span class="string">&quot;张三&quot;</span></span><br><span class="line"><span class="symbol">        overview:</span><span class="string">&quot;本人.&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="symbol">    msg:</span>null</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>现在，需要增加用户的姓名、年龄、e-mail、生日、各科成绩和奖惩情况的数据，并返给前端</p>
-<p>所以，前端暂时空着，只在控制台打印后端返回的数据，用来测试</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="symbol">  code:</span><span class="string">&quot;0&quot;</span>,</span><br><span class="line"><span class="symbol">  data:</span></span><br><span class="line">  &#123;</span><br><span class="line"><span class="symbol">    data:</span></span><br><span class="line">      &#123;</span><br><span class="line"><span class="symbol">        attachList:</span></span><br><span class="line">          [</span><br><span class="line">            <span class="number">0</span>:&#123;content:<span class="string">&quot;具体分数&quot;</span>,title:<span class="string">&quot;数学&quot;</span>&#125;</span><br><span class="line">            <span class="number">1</span>:&#123;content:<span class="string">&quot;具体分数&quot;</span>,title:<span class="string">&quot;物理&quot;</span>&#125;</span><br><span class="line">            <span class="number">2</span>:&#123;content:<span class="string">&quot;社会实践...&quot;</span>,title:<span class="string">&quot;社会实践&quot;</span>&#125;</span><br><span class="line">          ],</span><br><span class="line"><span class="symbol">        myName:</span><span class="string">&quot;$username&quot;</span>,</span><br><span class="line"><span class="symbol">        overview:</span><span class="string">&quot;随便编一段话，把奖惩情况也加进去，如果时间紧就算了&quot;</span>,</span><br><span class="line"><span class="symbol">        birthday:</span><span class="string">&quot;$birthday&quot;</span>,</span><br><span class="line"><span class="symbol">        email:</span><span class="string">&quot;$email&quot;</span>,</span><br><span class="line"><span class="symbol">        age:</span><span class="string">&quot;$age&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line"><span class="symbol">    msg:</span>null</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三、加功能">三、加功能</h2>
-<p>增加奖惩情况的添加功能，对应简历里的overview</p>
-<h2 id="四、翻页">四、翻页</h2>
-<p>暂未实现翻页功能，数据超过15个会溢出边框，后续完善，先凑合用着</p>
-<h2 id="五、注册">五、注册</h2>
-<p>注册成功后确实可以存储到数据库</p>
-<p>但是，再次登录时新注册的账号无法登录，猜测是因为后端将账号和密码写死，而没有查找数据库造成的</p>
-<h2 id="六、增加信息">六、增加信息</h2>
-<p>现在的后端默认是从后追加，id是一开始最后一个id加1所得的，而且无法改变。</p>
-<p>但是，请求时传入的id就没有用了</p>
-<p>比较合理的操作是，若id为空，则默认从后追加；</p>
-<p>若不为空，新的一条信息将替代原id所在的信息，从而实现修改数据</p>
+<h1>1.行列式解方程组</h1>
+<h2 id="1-1克莱默法则">1.1克莱默法则</h2>
+<p>用来解线性方程组<br>
+$$<br>
+Ax=b\<br>
+写成(a_1,a_2,\cdots,a_n)x=b,\quad a_n为列向量<br>
+$$<br>
+设A的行列式为D，</p>
+<p>若D = 0，则方程组无解或有无数组解</p>
+<p>若D不为0，则线性方程组有唯一解，其解为<br>
+$$<br>
+x_j=\frac{D_j}{D},\quad j=1,2,\cdots,n \ \<br>
+其中D_j=(a_1,a_2,\cdots,a_j-1,b,a_j+1,\cdots,a_n)<br>
+$$</p>
+<p><img src="cramer.png" alt="克莱默"></p>
+<h2 id="1-2线性方程组的解">1.2线性方程组的解</h2>
+<p>行空间与与零空间互补</p>
+<p>从行列式的角度来说，如果行列式不为零，那么有唯一解；如果行列式等于零，有可能无解，也有可能有无数组解。</p>
+<p>例如：</p>
+<p><img src="t1.png" alt="t1"></p>
+<p>其行列式的值为<br>
+$$<br>
+\lambda^2(\lambda+3)\\<br>
+当\lambda=0时，有无穷多解\<br>
+当\lambda=-3时，无解<br>
+$$</p>
+<h1>2.逆矩阵的求法</h1>
+<h2 id="2-1定义法">2.1定义法</h2>
+<p>利用待定系数的方法求解，例如：<br>
+$$<br>
+有矩阵A = \begin{bmatrix}1&amp;2\-1&amp;-3 \end{bmatrix},\quad<br>
+设它的逆为A^{-1}=\begin{bmatrix}a&amp;b\c&amp;d \end{bmatrix}\\<br>
+那么，根据定义AA^{-1}=I,\quad解方程组即可<br>
+$$<br>
+二阶矩阵要解4个方程，三阶矩阵要解9个方程，四阶矩阵要解16个方程……</p>
+<p>可以看出此方法的局限性，也就解个二阶矩阵用用</p>
+<h2 id="2-2伴随矩阵法">2.2伴随矩阵法</h2>
+<p>伴随矩阵是由原矩阵各项的代数余子式组成的</p>
+<p><strong>代数余子式：</strong><br>
+$$<br>
+A=<br>
+\begin{bmatrix}<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}<br>
+\end{bmatrix}\\<br>
+a_{ij}的代数余子式为\quad(-1)^{i+j}<br>
+\left|\begin{matrix}<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1,j-1}&amp;a_{1,j+1}&amp;\cdots&amp;a_{1n}\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2,j-1}&amp;a_{2,j+1}&amp;\cdots&amp;a_{2n}\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,j-1}&amp;a_{i-1,j+1}&amp;\cdots&amp;a_{i-1,n}\<br>
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,j-1}&amp;a_{i-1,j+1}&amp;\cdots&amp;a_{i-1,n}\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{n,j-1}&amp;a_{n,j+1}&amp;\cdots&amp;a_{nn}<br>
+\end{matrix}\right|\\<br>
+例如a_{22}的代数余子式为\quad(-1)^{2+2}<br>
+\left|\begin{matrix}<br>
+a_{11}&amp;a_{13}&amp;\cdots&amp;a_{1n}\<br>
+a_{31}&amp;a_{33}&amp;\cdots&amp;a_{3n}\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{n1}&amp;a_{n3}&amp;\cdots&amp;a_{nn}<br>
+\end{matrix}\right|<br>
+$$<br>
+<strong>伴随矩阵:</strong></p>
+<p>把每一项都求代数余子式，再把所得的值替换掉原来的项就得到了新矩阵，把这个新矩阵再转置，就得到了伴随矩阵A*。</p>
+<p><strong>求逆：</strong><br>
+$$<br>
+A^{-1}=\frac{A^*}{|A|}<br>
+$$<br>
+<s>不可不谓之暴算，等我大汗淋漓求出此逆之时，早就收卷了</s></p>
+<h2 id="2-3初等变换法">2.3初等变换法</h2>
+<p>把要求逆的矩阵的右边拼上一个单位阵，进行初等行变换，使得单位阵变到左边，剩下右边的为原矩阵的逆。<br>
+$$<br>
+A=<br>
+\begin{bmatrix}<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}<br>
+\end{bmatrix}\\<br>
+取A_1=[A,I_n]\<br>
+A_1=<br>
+\begin{bmatrix}<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}&amp;1&amp;0&amp;\cdots&amp;0\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}&amp;0&amp;1&amp;\cdots&amp;0\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}&amp;0&amp;0&amp;\cdots&amp;1<br>
+\end{bmatrix}<br>
+$$<br>
+然后，通过行化简，化为：<br>
+$$<br>
+A_2=[I_n,A^{-1}]\\<br>
+A_2=<br>
+\begin{bmatrix}<br>
+1&amp;0&amp;\cdots&amp;0&amp;a’<em>{11}&amp;a’</em>{12}&amp;\cdots&amp;a’<em>{1n}\<br>
+0&amp;1&amp;\cdots&amp;0&amp;a</em>{21}&amp;a’<em>{22}&amp;\cdots&amp;a’</em>{2n}\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+0&amp;0&amp;\cdots&amp;1&amp;a’<em>{n1}&amp;a’</em>{n2}&amp;\cdots&amp;a’_{nn}<br>
+\end{bmatrix}\\<br>
+右侧的部分就是A的逆A^{-1}<br>
+$$<br>
+<s>爱了，爱了</s></p>
+<h1>3.分块矩阵</h1>
+<h2 id="3-1加法与数乘与乘法">3.1加法与数乘与乘法</h2>
+<p>与普通矩阵的运算法则一致</p>
+<h2 id="3-2转置">3.2转置</h2>
+<p>类比分步求导，先以各分块为单位作转置，再把各分块内部取转置。</p>
+<p>例：<br>
+$$<br>
+A =<br>
+\begin{bmatrix}<br>
+A_{11}&amp;A_{12}\<br>
+A_{21}&amp;A_{22}<br>
+\end{bmatrix}\\<br>
+A^T=<br>
+\begin{bmatrix}<br>
+A_{11}^T&amp;A_{21}^T\<br>
+A_{12}^T&amp;A_{22}^T<br>
+\end{bmatrix}<br>
+$$</p>
+<h2 id="3-3分块上三角矩阵的逆">3.3分块上三角矩阵的逆</h2>
+<p>$$<br>
+A =<br>
+\begin{bmatrix}<br>
+A_{11}&amp;A_{12}\<br>
+O&amp;A_{22}<br>
+\end{bmatrix}\\<br>
+A^T=<br>
+\begin{bmatrix}<br>
+A_{11}^{-1}&amp;-A_{11}^{-1}A_{12}A_{22}^{-1}\<br>
+O&amp;A_{22}^{-1}<br>
+\end{bmatrix}<br>
+$$</p>
+<p>软工大一学的到此为止，上网一查直接吓坏了</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26285415">分块矩阵行列式</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/47760591">分块矩阵求逆</a></p>
+<p>还有秩……</p>
+<h1>4.向量线性相关和线性无关</h1>
+<h2 id="4-1基的变换">4.1基的变换</h2>
+<p>$$<br>
+设B{b_1,b_2,\cdots,b_n}和C{c_1,c_2,\cdots,c_n}都是向量空间V的基，则存在一个n\times n的矩阵\underset{C\leftarrow B}{P}使得\\<br>
+[x]_C =\underset{C\leftarrow B}{P} [x]_B\\<br>
+其中，变换矩阵\underset{C\leftarrow B}{P} 的列向量是基B中的向量对应在C坐标下的向量，即\\<br>
+\underset{C\leftarrow B}{P}=[\quad[b_1]_C\quad[b_2]_C\quad\cdots\quad[b_3]_C\quad]\\<br>
+因为\underset{C\leftarrow B}{P}是可逆的，所以(\underset{C\leftarrow B}{P})^{-1}=<br>
+\underset{B\leftarrow C}{P}<br>
+$$</p>
+<p>为了实现两个非标准基之间的变换，我们需要原来的基关于新的基的坐标变换。</p>
+<p>什么？我是谜语人？看例子</p>
+<p>例一：已知变换矩阵求基<br>
+$$<br>
+对于一个向量空间V，考虑两个基B{b_1,b_2},C{c_1,c_2},满足\<br>
+b_1=4c_1+c_2,\quad b_2=-6c_1+c_2\\<br>
+已知[x]_B=<br>
+\begin{bmatrix}<br>
+3\1<br>
+\end{bmatrix}<br>
+,求[x]_C\\<br>
+解：因为[x]_B=<br>
+\begin{bmatrix}<br>
+3\1<br>
+\end{bmatrix}，\quad<br>
+所以x = 3b_1+b_2\<br>
+所以，[x]_C=[3b_1+b_2]_C\<br>
+=3[b_1]_C+[b_2]_C\<br>
+=[[b_1]_C\quad[b_2]_C]<br>
+\begin{bmatrix}<br>
+3\1<br>
+\end{bmatrix}\\<br>
+又因为，b_1=4c_1+c_2,\quad b_2=-6c_1+c_2\<br>
+所以，[b_1]_C=<br>
+\begin{bmatrix}<br>
+4\1<br>
+\end{bmatrix},<br>
+[b_2]_C=<br>
+\begin{bmatrix}<br>
+-6\1<br>
+\end{bmatrix}\\<br>
+所以，[x]_C=<br>
+\begin{bmatrix}<br>
+4&amp;-6\1&amp;1<br>
+\end{bmatrix}<br>
+\begin{bmatrix}<br>
+3\1<br>
+\end{bmatrix}=<br>
+\begin{bmatrix}<br>
+6\4<br>
+\end{bmatrix}<br>
+$$<br>
+例二：已知基求变换矩阵<br>
+$$<br>
+对于一个向量空间V，考虑两个基B{b_1,b_2},C{c_1,c_2}，\<br>
+已知b_1=<br>
+\begin{bmatrix}<br>
+-9\1<br>
+\end{bmatrix},<br>
+b_2=<br>
+\begin{bmatrix}<br>
+-5\-1<br>
+\end{bmatrix},<br>
+c_1=<br>
+\begin{bmatrix}<br>
+1\-4<br>
+\end{bmatrix},<br>
+c_2=<br>
+\begin{bmatrix}<br>
+3\-5<br>
+\end{bmatrix},<br>
+求变换矩阵\underset{C\leftarrow B}{P}\\<br>
+写出系数矩阵[c_1\quad c_2\quad b_1\quad b_2]=<br>
+\begin{bmatrix}<br>
+1&amp;3&amp;-9&amp;-5\<br>
+-4&amp;-5&amp;1&amp;-1<br>
+\end{bmatrix}\<br>
+行化简得<br>
+\begin{bmatrix}<br>
+1&amp;0&amp;6&amp;4\<br>
+0&amp;1&amp;-5&amp;-3<br>
+\end{bmatrix}\<br>
+所以\underset{C\leftarrow B}{P}=<br>
+\begin{bmatrix}<br>
+6&amp;4\<br>
+-5&amp;-3<br>
+\end{bmatrix}<br>
+$$</p>
+<h2 id="4-2施密特正交化">4.2施密特正交化</h2>
+<h3 id="4-2-1-定义">4.2.1.定义</h3>
+<p>施密特正交化（Schmidt orthogonalization）是求欧氏空间正交基的一种方法。从欧氏空间任意线性无关的向量组α1，α2，……，αm出发，求得正交向量组β1，β2，……，βm，使由α1，α2，……，αm与向量组β1，β2，……，βm等价，再将正交向量组中每个向量经过单位化，就得到一个标准正交向量组，这种方法称为施密特正交化。</p>
+<h3 id="4-2-2-计算">4.2.2.计算</h3>
+<p>以此矩阵为例<br>
+$$<br>
+\begin{matrix}<br>
+1&amp;0&amp;0\<br>
+1&amp;1&amp;0\<br>
+1&amp;1&amp;1\<br>
+1&amp;1&amp;1\<br>
+\end{matrix}<br>
+$$<br>
+将矩阵写为无关向量组的形式，一般取列向量组a1，a2，……，am</p>
+<p>$$<br>
+a_1 =  \begin{bmatrix}1\1\1\1 \end{bmatrix},<br>
+a_2 =  \begin{bmatrix}0\1\1\1 \end{bmatrix},<br>
+a_3 =  \begin{bmatrix}0\0\1\1 \end{bmatrix}<br>
+$$<br>
+正交化：<br>
+$$<br>
+b_1=a_1\<br>
+b_2 = a_2-\frac{&lt;a_2,b_1&gt;}{&lt;b_1,b_1&gt;}b_1\<br>
+b_3 = a_3 - \frac{&lt;a_3,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_3,b_2&gt;}{&lt;b_2,b_2&gt;}b_2\<br>
+…\<br>
+b_n = a_n - \frac{&lt;a_n,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_n,b_2&gt;}{&lt;b_2,b_2&gt;}b_2 - …-\frac{&lt;a_n,b_{n-1}&gt;}{&lt;b_{n-1},b_{n-1}&gt;}b_{n-1}\<br>
+$$<br>
+注：<br>
+$$<br>
+&lt;a,b&gt;表示向量内积，即点乘<br>
+$$<br>
+例中：<br>
+$$<br>
+b_1= a_1 = \begin{bmatrix}1\1\1\1 \end{bmatrix}\<br>
+b_2 = a_2-\frac{&lt;a_2,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 =a_1-\frac{3}{4}b_1=\begin{bmatrix}-3\1\1\1 \end{bmatrix}\<br>
+b_3 = a_3 - \frac{&lt;a_3,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_3,b_2&gt;}{&lt;b_2,b_2&gt;}b_2=a_3-\frac{1}{2}b_1-\frac{1}{6}b_2=\begin{bmatrix}0\-2\1\1 \end{bmatrix}\<br>
+$$<br>
+单位化：<br>
+$$<br>
+\varepsilon_n = \frac{b_n}{||b_n||},\<br>
+标准正交基为{\varepsilon_1,\varepsilon_2,…,\varepsilon_n}<br>
+$$<br>
+例中：<br>
+$$<br>
+\varepsilon_1 = \frac{b_1}{||b_1||}=\begin{bmatrix}\frac{1}{2}\\frac{1}{2}\\frac{1}{2}\\frac{1}{2} \end{bmatrix},\<br>
+\varepsilon_2 = \frac{b_2}{||b_2||} = \begin{bmatrix}-\frac{\sqrt{3}}{2}\\frac{\sqrt{3}}{6}\\frac{\sqrt{3}}{6}\\frac{\sqrt{3}}{6} \end{bmatrix},\<br>
+\varepsilon_3 = \frac{b_3}{||b_1||} = \begin{bmatrix}0\-\frac{\sqrt{6}}{3}\\frac{\sqrt{6}}{6}\\frac{\sqrt{6}}{6} \end{bmatrix}\<br>
+$$</p>
+<h3 id="4-2-3-不唯一">4.2.3.不唯一</h3>
+<p>正交化的向量组不唯一. 按施密特正交化过程, 我们将向量组中的向量打乱顺序得到的向量组也不一样，标准正交基也不是唯一的.</p>
+<h1>5.等价、相似、合同</h1>
+<h2 id="矩阵等价">矩阵等价</h2>
+<p>$$<br>
+若存在可逆阵P和Q，使得B=PAQ，则称矩阵A与B等价，记作A\cong B<br>
+$$</p>
+<p>充要条件：A和B的秩相等</p>
+<h2 id="矩阵合同">矩阵合同</h2>
+<p>$$<br>
+若存在可逆阵P，使得B=P^TAP，则称矩阵A与B合同，记作A\underset{-}{\sim} B<br>
+$$</p>
+<h2 id="矩阵相似">矩阵相似</h2>
+<p>$$<br>
+若存在可逆阵P，使得B=P^{-1}AP，则称矩阵A与B相似，记作A\sim B<br>
+$$</p>
+<h2 id="三者关系：">三者关系：</h2>
+<p>$$<br>
+A\underset{-}{\sim} B\Rightarrow A\cong B\\<br>
+A\sim B\Rightarrow A\cong B\<br>
+反之，均不成立<br>
+$$</p>
+<p>一般而言，相似与合同没有关系。但是，正交相似与正交合同是同一回事。而且实对称矩阵一定与对角阵合同。</p>
+<h1>7.特征值特征向量</h1>
+<h2 id="定义：">定义：</h2>
+<p>$$<br>
+A是n阶方阵，\lambda是一个数字，若存在非零向量\alpha，使得A\alpha=\lambda\alpha,<br>
+则称\lambda为特征值，非零向量\alpha为矩阵A对应与特征值\lambda的特征向量。<br>
+$$</p>
+<h2 id="求法：">求法：</h2>
+<p>$$<br>
+满足|A-\lambda E|=O的数\lambda为特征值\\<br>
+方程组(A-\lambda E)X=O的非零解或基础解系为特征向量<br>
+$$</p>
+<p>例：<br>
+$$<br>
+求矩阵A=<br>
+\begin{bmatrix}<br>
+1&amp;-2&amp;2\<br>
+-2&amp;-2&amp;4\<br>
+2&amp;4&amp;-2\<br>
+\end{bmatrix}的特征值，特征向量\\<br>
+\left|\begin{matrix}<br>
+1-\lambda&amp;-2&amp;2\<br>
+-2&amp;-2-\lambda&amp;4\<br>
+2&amp;4&amp;-2-\lambda\<br>
+\end{matrix}\right|\\<br>
+=\cdots=-\lambda^3-3\lambda^2+24\lambda-28\\<br>
+猜根，根往往是常数项的因子，\\<br>
+解得，上式=-(\lambda-2)^2(\lambda+7)\\<br>
+\lambda_1=\lambda_2=2，\lambda_3=-7\\<br>
+①对于\lambda_1=\lambda_2=2，\<br>
+A-2E=<br>
+\begin{bmatrix}<br>
+-1&amp;-2&amp;2\<br>
+-2&amp;-4&amp;4\<br>
+2&amp;4&amp;-4\<br>
+\end{bmatrix}\sim<br>
+\begin{bmatrix}<br>
+-1&amp;-2&amp;2\<br>
+0&amp;0&amp;0\<br>
+0&amp;0&amp;0\<br>
+\end{bmatrix}\\\Rightarrow<br>
+x_1=-2x_2+2x_3\\<br>
+所以，\xi_1=\begin{bmatrix}-2\1\0 \end{bmatrix}，<br>
+\xi_1=\begin{bmatrix}2\0\1 \end{bmatrix}\\<br>
+特征值为2的全部特征向量为k_1\xi_1+k_2\xi_2\\<br>
+②同理可得，\lambda=-7的特征向量\xi_3=\begin{bmatrix}1\2\-2 \end{bmatrix}\\<br>
+其全部特征向量为k_3\xi_3\\k_1,k_2,k_3均不为0<br>
+$$</p>
+<h2 id="性质：">性质：</h2>
+<p>$$<br>
+若\lambda是A的特征值，那么：\\<br>
+1.A^T的特征值是\lambda\<br>
+2.A^{-1}的特征值是\lambda^{-1}\<br>
+3.kA的特征值是k\lambda\<br>
+4.A^m的特征值是\lambda^m\<br>
+5.f(A)的特征值是f(\lambda)\<br>
+6.A^*的特征值是\frac{|A|}\lambda\<br>
+7.\lambda_1\lambda_2\cdots \lambda_n=|A|\<br>
+8.\lambda_1+\lambda_2+\cdots +\lambda_n=a_{11}+a_{22}+\cdots+a_{nn}<br>
+$$</p>
+<h1>8.二次型</h1>
+<h2 id="化二次型为标准型">化二次型为标准型</h2>
+<p>(1)把二次型系数写成实对称矩阵</p>
+<p>(2)施密特正交单位化</p>
+<p>(3)组成变换矩阵，得对角阵，即得标准型</p>
+<h2 id="分类">分类</h2>
+<p>正定、负定，不定</p>
+<p>特征值为正，则是正定阵</p>
+<p>特征值为负，则是负定阵</p>
+<p>特征值既有正的也有负的，则是不定阵</p>
+<h1>9.QR分解</h1>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lhxez6868/article/details/100165447">看这</a></p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/java-server-model/" data-toggle="tooltip" data-placement="top" title="java课设保姆级教程1">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/java-server-interface1/" data-toggle="tooltip" data-placement="top" title="java课设接口1">Next Post &rarr;</a>
+            <a href="/cn/java-server-db/" data-toggle="tooltip" data-placement="top" title="java课设数据库关系">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -582,7 +900,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=java课设初看框架与疑问&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/java-server-test/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=大一下线性代数期末复习&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/linear-review/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -617,7 +935,7 @@
       repo: '',
       owner: '',
       admin: '',
-      id: 'Mon Mar 14 2022 11:06:51 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Thu May 05 2022 12:36:51 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -670,7 +988,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%8F%90%E4%BA%A4%E6%88%90%E7%BB%A9"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、提交成绩</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%80%E5%8E%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、简历</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%8A%A0%E5%8A%9F%E8%83%BD"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、加功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E7%BF%BB%E9%A1%B5"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、翻页</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E6%B3%A8%E5%86%8C"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、注册</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E5%A2%9E%E5%8A%A0%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、增加信息</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.行列式解方程组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-1%E5%85%8B%E8%8E%B1%E9%BB%98%E6%B3%95%E5%88%99"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1克莱默法则</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-2%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2线性方程组的解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.逆矩阵的求法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1%E5%AE%9A%E4%B9%89%E6%B3%95"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1定义法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E6%B3%95"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2伴随矩阵法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-3%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E6%B3%95"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3初等变换法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.分块矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-1%E5%8A%A0%E6%B3%95%E4%B8%8E%E6%95%B0%E4%B9%98%E4%B8%8E%E4%B9%98%E6%B3%95"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1加法与数乘与乘法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-2%E8%BD%AC%E7%BD%AE"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2转置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-3%E5%88%86%E5%9D%97%E4%B8%8A%E4%B8%89%E8%A7%92%E7%9F%A9%E9%98%B5%E7%9A%84%E9%80%86"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3分块上三角矩阵的逆</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4.向量线性相关和线性无关</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-1%E5%9F%BA%E7%9A%84%E5%8F%98%E6%8D%A2"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">4.1基的变换</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-2%E6%96%BD%E5%AF%86%E7%89%B9%E6%AD%A3%E4%BA%A4%E5%8C%96"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">4.2施密特正交化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-1-%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">4.2.1.定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-2-%E8%AE%A1%E7%AE%97"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">4.2.2.计算</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-3-%E4%B8%8D%E5%94%AF%E4%B8%80"><span class="toc-nav-number">4.2.3.</span> <span class="toc-nav-text">4.2.3.不唯一</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5.等价、相似、合同</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E7%AD%89%E4%BB%B7"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">矩阵等价</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%90%88%E5%90%8C"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">矩阵合同</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%BC%BC"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">矩阵相似</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E8%80%85%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">三者关系：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">7.特征值特征向量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">定义：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B1%82%E6%B3%95%EF%BC%9A"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">求法：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%A7%E8%B4%A8%EF%BC%9A"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">性质：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">8.二次型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8C%96%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B8%BA%E6%A0%87%E5%87%86%E5%9E%8B"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">化二次型为标准型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">分类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">9.QR分解</span></a></li></ol>
         
         </div>
       </aside>
@@ -693,9 +1011,7 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#spring boot" title="spring boot">spring boot</a>
-            
-            <a class="tag" href="/tags/#jpa" title="jpa">jpa</a>
+            <a class="tag" href="/tags/#线性代数" title="线性代数">线性代数</a>
             
           </div>
         </section>

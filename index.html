@@ -478,6 +478,54 @@
   <!-- top end -->
   
 
+  <a href="/cn/linear-review/">
+    <h2 class="post-title">
+      大一下线性代数期末复习
+    </h2>
+    <h3 class="post-subtitle">
+      A succinct hexo theme...
+    </h3>
+    <div class="post-content-preview">
+      
+期末复习啊啊啊呜呜呜
+最基本的知识点
+
+1.行列式解方程组
+1.1克莱默法则
+用来解线性方程组
+$$
+Ax=b\
+写成(a_1,a_2,\cdots,a_n)x=b,\quad a_n为列向量
+$$
+设A的行列式为D，
+若D = 0，则方程组无解或有无数组解
+若D不为0，则线性方程组有唯一解，其解为
+$$
+x_j=\frac{D_j}{D},\quad j=1,2,\cdots,n \ \......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by lhs on
+    2022-05-05
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#线性代数" title="线性代数">线性代数</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/java-server-db/">
     <h2 class="post-title">
       java课设数据库关系
@@ -977,6 +1025,10 @@ numb......
     <a href="/tags/#react" title="react" rel="1">react</a>
     
     
+    
+    <a href="/tags/#线性代数" title="线性代数" rel="1">线性代数</a>
+    
+    
   </div>
 </section>
 
@@ -1064,6 +1116,10 @@ numb......
 <div class="widget">
   <ul>
     
+    <a href="cn/linear-review/">
+      <li>大一下线性代数期末复习</li>
+    </a>
+    
     <a href="cn/java-server-db/">
       <li>java课设数据库关系</li>
     </a>
@@ -1078,10 +1134,6 @@ numb......
     
     <a href="cn/java-server-interface2/">
       <li>java课设接口2</li>
-    </a>
-    
-    <a href="cn/java-server-2-log1/">
-      <li>java课设二周目阶段总结1</li>
     </a>
     
   </ul>
@@ -1108,7 +1160,7 @@ numb......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/04/">April 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">5</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/04/">April 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">5</span></li></ul>
 </div>
 
 
@@ -1122,6 +1174,10 @@ numb......
     
     <a href="/categories/#Java课设2021">
       <li>Java课设2021</li>
+    </a>
+    
+    <a href="/categories/#大一期末复习">
+      <li>大一期末复习</li>
     </a>
     
   </ul>
@@ -1640,5 +1696,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
