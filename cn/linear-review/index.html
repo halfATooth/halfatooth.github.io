@@ -504,8 +504,8 @@ $$</p>
 <h2 id="定义法">定义法</h2>
 <p>利用待定系数的方法求解，例如：<br>
 $$<br>
-有矩阵A = \begin{bmatrix}1&amp;2\ -1&amp;-3 \end{bmatrix},\quad<br>
-设它的逆为A^{-1}=\begin{bmatrix}a&amp;b\ c&amp;d \end{bmatrix}\\<br>
+有矩阵A = \begin{bmatrix}1&amp;2\\ -1&amp;-3 \end{bmatrix},\quad<br>
+设它的逆为A^{-1}=\begin{bmatrix}a&amp;b\\ c&amp;d \end{bmatrix}\\<br>
 那么，根据定义AA^{-1}=I,\quad解方程组即可<br>
 $$<br>
 二阶矩阵要解4个方程，三阶矩阵要解9个方程，四阶矩阵要解16个方程……</p>
@@ -516,26 +516,26 @@ $$<br>
 $$<br>
 A=<br>
 \begin{bmatrix}<br>
-a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\<br>
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\<br>
-\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>
 a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}<br>
 \end{bmatrix}\\<br>
 a_{ij}的代数余子式为\quad(-1)^{i+j}<br>
 \left|\begin{matrix}<br>
-a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1,j-1}&amp;a_{1,j+1}&amp;\cdots&amp;a_{1n}\<br>
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2,j-1}&amp;a_{2,j+1}&amp;\cdots&amp;a_{2n}\<br>
-\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
-a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,j-1}&amp;a_{i-1,j+1}&amp;\cdots&amp;a_{i-1,n}\<br>
-a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,j-1}&amp;a_{i-1,j+1}&amp;\cdots&amp;a_{i-1,n}\<br>
-\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1,j-1}&amp;a_{1,j+1}&amp;\cdots&amp;a_{1n}\\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2,j-1}&amp;a_{2,j+1}&amp;\cdots&amp;a_{2n}\\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,j-1}&amp;a_{i-1,j+1}&amp;\cdots&amp;a_{i-1,n}\\<br>
+a_{i-1,1}&amp;a_{i-1,2}&amp;\cdots&amp;a_{i-1,j-1}&amp;a_{i-1,j+1}&amp;\cdots&amp;a_{i-1,n}\\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>
 a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{n,j-1}&amp;a_{n,j+1}&amp;\cdots&amp;a_{nn}<br>
 \end{matrix}\right|\\<br>
 例如a_{22}的代数余子式为\quad(-1)^{2+2}<br>
 \left|\begin{matrix}<br>
-a_{11}&amp;a_{13}&amp;\cdots&amp;a_{1n}\<br>
-a_{31}&amp;a_{33}&amp;\cdots&amp;a_{3n}\<br>
-\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{11}&amp;a_{13}&amp;\cdots&amp;a_{1n}\\<br>
+a_{31}&amp;a_{33}&amp;\cdots&amp;a_{3n}\\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>
 a_{n1}&amp;a_{n3}&amp;\cdots&amp;a_{nn}<br>
 \end{matrix}\right|<br>
 $$<br>
@@ -551,31 +551,32 @@ $$<br>
 $$<br>
 A=<br>
 \begin{bmatrix}<br>
-a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\<br>
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\<br>
-\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>
 a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}<br>
 \end{bmatrix}\\<br>
-取A_1=[A,I_n]\<br>
+取A_1=[A,I_n]\\<br>
 A_1=<br>
 \begin{bmatrix}<br>
-a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}&amp;1&amp;0&amp;\cdots&amp;0\<br>
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}&amp;0&amp;1&amp;\cdots&amp;0\<br>
-\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
+a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}&amp;1&amp;0&amp;\cdots&amp;0\\<br>
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}&amp;0&amp;1&amp;\cdots&amp;0\\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>
 a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}&amp;0&amp;0&amp;\cdots&amp;1<br>
 \end{bmatrix}<br>
 $$<br>
 然后，通过行化简，化为：<br>
 $$<br>
-A_2=[I_n,A^{-1}]\\<br>
-A_2=<br>
-\begin{bmatrix}<br>
-1&amp;0&amp;\cdots&amp;0&amp;a’<em>{11}&amp;a’</em>{12}&amp;\cdots&amp;a’<em>{1n}\<br>
-0&amp;1&amp;\cdots&amp;0&amp;a</em>{21}&amp;a’<em>{22}&amp;\cdots&amp;a’</em>{2n}\<br>
-\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\<br>
-0&amp;0&amp;\cdots&amp;1&amp;a’<em>{n1}&amp;a’</em>{n2}&amp;\cdots&amp;a’_{nn}<br>
+A_2=[I_n,A^{-1}]<br>
+$$</p>
+<p>$$<br>
+A_2=\begin{bmatrix}<br>
+1&amp;0&amp;\cdots&amp;0&amp;a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\<br>
+0&amp;1&amp;\cdots&amp;0&amp;a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\<br>
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\<br>
+0&amp;0&amp;\cdots&amp;1&amp;a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}<br>
 \end{bmatrix}\\<br>
-右侧的部分就是A的逆A^{-1}<br>
+右侧的部分就是A的逆A^{-1}\\<br>
 $$<br>
 <s>爱了，爱了</s></p>
 <h1>分块矩阵</h1>
@@ -587,12 +588,12 @@ $$<br>
 $$<br>
 A =<br>
 \begin{bmatrix}<br>
-A_{11}&amp;A_{12}\<br>
+A_{11}&amp;A_{12}\\<br>
 A_{21}&amp;A_{22}<br>
 \end{bmatrix}\\<br>
 A^T=<br>
 \begin{bmatrix}<br>
-A_{11}^T&amp;A_{21}^T\<br>
+A_{11}^T&amp;A_{21}^T\\<br>
 A_{12}^T&amp;A_{22}^T<br>
 \end{bmatrix}<br>
 $$</p>
@@ -600,12 +601,12 @@ $$</p>
 <p>$$<br>
 A =<br>
 \begin{bmatrix}<br>
-A_{11}&amp;A_{12}\<br>
+A_{11}&amp;A_{12}\\<br>
 O&amp;A_{22}<br>
 \end{bmatrix}\\<br>
 A^T=<br>
 \begin{bmatrix}<br>
-A_{11}^{-1}&amp;-A_{11}^{-1}A_{12}A_{22}^{-1}\<br>
+A_{11}^{-1}&amp;-A_{11}^{-1}A_{12}A_{22}^{-1}\\<br>
 O&amp;A_{22}^{-1}<br>
 \end{bmatrix}<br>
 $$</p>
@@ -631,73 +632,73 @@ $$<br>
 b_1=4c_1+c_2,\quad b_2=-6c_1+c_2\\<br>
 已知[x]_B=<br>
 \begin{bmatrix}<br>
-3\1<br>
+3\\1<br>
 \end{bmatrix}<br>
 ,求[x]_C\\<br>
 解：因为[x]_B=<br>
 \begin{bmatrix}<br>
-3\1<br>
+3\\1<br>
 \end{bmatrix}，\quad<br>
-所以x = 3b_1+b_2\<br>
-所以，[x]_C=[3b_1+b_2]_C\<br>
-=3[b_1]_C+[b_2]_C\<br>
+所以x = 3b_1+b_2\\<br>
+所以，[x]_C=[3b_1+b_2]_C\\<br>
+=3[b_1]_C+[b_2]_C\\<br>
 =[[b_1]_C\quad[b_2]_C]<br>
 \begin{bmatrix}<br>
-3\1<br>
+3\\1<br>
 \end{bmatrix}\\<br>
-又因为，b_1=4c_1+c_2,\quad b_2=-6c_1+c_2\<br>
+又因为，b_1=4c_1+c_2,\quad b_2=-6c_1+c_2\\<br>
 所以，[b_1]_C=<br>
 \begin{bmatrix}<br>
-4\1<br>
+4\\1<br>
 \end{bmatrix},<br>
 [b_2]_C=<br>
 \begin{bmatrix}<br>
--6\1<br>
+-6\\1<br>
 \end{bmatrix}\\<br>
 所以，[x]_C=<br>
 \begin{bmatrix}<br>
-4&amp;-6\1&amp;1<br>
+4&amp;-6\\1&amp;1<br>
 \end{bmatrix}<br>
 \begin{bmatrix}<br>
-3\1<br>
+3\\1<br>
 \end{bmatrix}=<br>
 \begin{bmatrix}<br>
-6\4<br>
+6\\4<br>
 \end{bmatrix}<br>
 $$<br>
 例二：已知基求变换矩阵<br>
 $$<br>
-对于一个向量空间V，考虑两个基B{b_1,b_2},C{c_1,c_2}，\<br>
+对于一个向量空间V，考虑两个基B{b_1,b_2},C{c_1,c_2}，\\<br>
 已知b_1=<br>
 \begin{bmatrix}<br>
--9\1<br>
+-9\\1<br>
 \end{bmatrix},<br>
 b_2=<br>
 \begin{bmatrix}<br>
--5\-1<br>
+-5\\-1<br>
 \end{bmatrix},<br>
 c_1=<br>
 \begin{bmatrix}<br>
-1\-4<br>
+1\\-4<br>
 \end{bmatrix},<br>
 c_2=<br>
 \begin{bmatrix}<br>
-3\-5<br>
+3\\-5<br>
 \end{bmatrix},<br>
 求变换矩阵\underset{C\leftarrow B}{P}\\<br>
 写出系数矩阵[c_1\quad c_2\quad b_1\quad b_2]=<br>
 \begin{bmatrix}<br>
-1&amp;3&amp;-9&amp;-5\<br>
+1&amp;3&amp;-9&amp;-5\\<br>
 -4&amp;-5&amp;1&amp;-1<br>
-\end{bmatrix}\<br>
+\end{bmatrix}\\<br>
 行化简得<br>
 \begin{bmatrix}<br>
-1&amp;0&amp;6&amp;4\<br>
+1&amp;0&amp;6&amp;4\\<br>
 0&amp;1&amp;-5&amp;-3<br>
-\end{bmatrix}\<br>
+\end{bmatrix}\\<br>
 所以\underset{C\leftarrow B}{P}=<br>
 \begin{bmatrix}<br>
-6&amp;4\<br>
+6&amp;4\\<br>
 -5&amp;-3<br>
 \end{bmatrix}<br>
 $$</p>
@@ -708,25 +709,25 @@ $$</p>
 <p>以此矩阵为例<br>
 $$<br>
 \begin{matrix}<br>
-1&amp;0&amp;0\<br>
-1&amp;1&amp;0\<br>
-1&amp;1&amp;1\<br>
-1&amp;1&amp;1\<br>
+1&amp;0&amp;0\\<br>
+1&amp;1&amp;0\\<br>
+1&amp;1&amp;1\\<br>
+1&amp;1&amp;1\\<br>
 \end{matrix}<br>
 $$<br>
 将矩阵写为无关向量组的形式，一般取列向量组a1，a2，……，am</p>
 <p>$$<br>
-a_1 =  \begin{bmatrix}1\1\1\1 \end{bmatrix},<br>
-a_2 =  \begin{bmatrix}0\1\1\1 \end{bmatrix},<br>
-a_3 =  \begin{bmatrix}0\0\1\1 \end{bmatrix}<br>
+a_1 =  \begin{bmatrix}1\\1\\1\\1 \end{bmatrix},<br>
+a_2 =  \begin{bmatrix}0\\1\\1\\1 \end{bmatrix},<br>
+a_3 =  \begin{bmatrix}0\\0\\1\\1 \end{bmatrix}<br>
 $$<br>
 正交化：<br>
 $$<br>
-b_1=a_1\<br>
-b_2 = a_2-\frac{&lt;a_2,b_1&gt;}{&lt;b_1,b_1&gt;}b_1\<br>
-b_3 = a_3 - \frac{&lt;a_3,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_3,b_2&gt;}{&lt;b_2,b_2&gt;}b_2\<br>
-…\<br>
-b_n = a_n - \frac{&lt;a_n,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_n,b_2&gt;}{&lt;b_2,b_2&gt;}b_2 - …-\frac{&lt;a_n,b_{n-1}&gt;}{&lt;b_{n-1},b_{n-1}&gt;}b_{n-1}\<br>
+b_1=a_1\\<br>
+b_2 = a_2-\frac{&lt;a_2,b_1&gt;}{&lt;b_1,b_1&gt;}b_1\\<br>
+b_3 = a_3 - \frac{&lt;a_3,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_3,b_2&gt;}{&lt;b_2,b_2&gt;}b_2\\<br>
+…\\<br>
+b_n = a_n - \frac{&lt;a_n,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_n,b_2&gt;}{&lt;b_2,b_2&gt;}b_2 - …-\frac{&lt;a_n,b_{n-1}&gt;}{&lt;b_{n-1},b_{n-1}&gt;}b_{n-1}\\<br>
 $$<br>
 注：<br>
 $$<br>
@@ -734,20 +735,20 @@ $$<br>
 $$<br>
 例中：<br>
 $$<br>
-b_1= a_1 = \begin{bmatrix}1\1\1\1 \end{bmatrix}\<br>
-b_2 = a_2-\frac{&lt;a_2,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 =a_1-\frac{3}{4}b_1=\begin{bmatrix}-3\1\1\1 \end{bmatrix}\<br>
-b_3 = a_3 - \frac{&lt;a_3,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_3,b_2&gt;}{&lt;b_2,b_2&gt;}b_2=a_3-\frac{1}{2}b_1-\frac{1}{6}b_2=\begin{bmatrix}0\-2\1\1 \end{bmatrix}\<br>
+b_1= a_1 = \begin{bmatrix}1\\1\\1\\1 \end{bmatrix}\\<br>
+b_2 = a_2-\frac{&lt;a_2,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 =a_1-\frac{3}{4}b_1=\begin{bmatrix}-3\\1\\1\\1 \end{bmatrix}\\<br>
+b_3 = a_3 - \frac{&lt;a_3,b_1&gt;}{&lt;b_1,b_1&gt;}b_1 - \frac{&lt;a_3,b_2&gt;}{&lt;b_2,b_2&gt;}b_2=a_3-\frac{1}{2}b_1-\frac{1}{6}b_2=\begin{bmatrix}0\\-2\\1\\1 \end{bmatrix}\\<br>
 $$<br>
 单位化：<br>
 $$<br>
-\varepsilon_n = \frac{b_n}{||b_n||},\<br>
+\varepsilon_n = \frac{b_n}{||b_n||},\\<br>
 标准正交基为{\varepsilon_1,\varepsilon_2,…,\varepsilon_n}<br>
 $$<br>
 例中：<br>
 $$<br>
-\varepsilon_1 = \frac{b_1}{||b_1||}=\begin{bmatrix}\frac{1}{2}\\frac{1}{2}\\frac{1}{2}\\frac{1}{2} \end{bmatrix},\<br>
-\varepsilon_2 = \frac{b_2}{||b_2||} = \begin{bmatrix}-\frac{\sqrt{3}}{2}\\frac{\sqrt{3}}{6}\\frac{\sqrt{3}}{6}\\frac{\sqrt{3}}{6} \end{bmatrix},\<br>
-\varepsilon_3 = \frac{b_3}{||b_1||} = \begin{bmatrix}0\-\frac{\sqrt{6}}{3}\\frac{\sqrt{6}}{6}\\frac{\sqrt{6}}{6} \end{bmatrix}\<br>
+\varepsilon_1 = \frac{b_1}{||b_1||}=\begin{bmatrix}\frac{1}{2}\\\frac{1}{2}\\frac{1}{2}\\\frac{1}{2} \end{bmatrix},\\<br>
+\varepsilon_2 = \frac{b_2}{||b_2||} = \begin{bmatrix}-\frac{\sqrt{3}}{2}\\\frac{\sqrt{3}}{6}\\\frac{\sqrt{3}}{6}\\frac{\sqrt{3}}{6} \end{bmatrix},\\<br>
+\varepsilon_3 = \frac{b_3}{||b_1||} = \begin{bmatrix}0\\-\frac{\sqrt{6}}{3}\\\frac{\sqrt{6}}{6}\\\frac{\sqrt{6}}{6} \end{bmatrix}\\<br>
 $$</p>
 <h3 id="不唯一">不唯一</h3>
 <p>正交化的向量组不唯一. 按施密特正交化过程, 我们将向量组中的向量打乱顺序得到的向量组也不一样，标准正交基也不是唯一的.</p>
@@ -767,15 +768,15 @@ $$</p>
 $$</p>
 <h2 id="三者关系：">三者关系：</h2>
 <p>$$<br>
-A\underset{-}{\sim} B\Rightarrow A\cong B\\<br>
-A\sim B\Rightarrow A\cong B\<br>
+A\underset{-}{\sim} B\Rightarrow A\cong B\\\<br>
+A\sim B\Rightarrow A\cong B\\<br>
 反之，均不成立<br>
 $$</p>
 <p>一般而言，相似与合同没有关系。但是，正交相似与正交合同是同一回事。而且实对称矩阵一定与对角阵合同。</p>
 <h1>特征值特征向量</h1>
 <h2 id="定义：">定义：</h2>
 <p>$$<br>
-A是n阶方阵，\lambda是一个数字，若存在非零向量\alpha，使得A\alpha=\lambda\alpha,<br>
+A是n阶方阵，\lambda是一个数字，若存在非零向量\alpha，使得A\alpha=\lambda\alpha,\\<br>
 则称\lambda为特征值，非零向量\alpha为矩阵A对应与特征值\lambda的特征向量。<br>
 $$</p>
 <h2 id="求法：">求法：</h2>
@@ -787,48 +788,48 @@ $$</p>
 $$<br>
 求矩阵A=<br>
 \begin{bmatrix}<br>
-1&amp;-2&amp;2\<br>
--2&amp;-2&amp;4\<br>
-2&amp;4&amp;-2\<br>
+1&amp;-2&amp;2\\<br>
+-2&amp;-2&amp;4\\<br>
+2&amp;4&amp;-2\\<br>
 \end{bmatrix}的特征值，特征向量\\<br>
 \left|\begin{matrix}<br>
-1-\lambda&amp;-2&amp;2\<br>
--2&amp;-2-\lambda&amp;4\<br>
-2&amp;4&amp;-2-\lambda\<br>
+1-\lambda&amp;-2&amp;2\\<br>
+-2&amp;-2-\lambda&amp;4\\<br>
+2&amp;4&amp;-2-\lambda\\<br>
 \end{matrix}\right|\\<br>
 =\cdots=-\lambda^3-3\lambda^2+24\lambda-28\\<br>
 猜根，根往往是常数项的因子，\\<br>
 解得，上式=-(\lambda-2)^2(\lambda+7)\\<br>
 \lambda_1=\lambda_2=2，\lambda_3=-7\\<br>
-①对于\lambda_1=\lambda_2=2，\<br>
+①对于\lambda_1=\lambda_2=2，\\<br>
 A-2E=<br>
 \begin{bmatrix}<br>
--1&amp;-2&amp;2\<br>
--2&amp;-4&amp;4\<br>
-2&amp;4&amp;-4\<br>
+-1&amp;-2&amp;2\\<br>
+-2&amp;-4&amp;4\\<br>
+2&amp;4&amp;-4\\<br>
 \end{bmatrix}\sim<br>
 \begin{bmatrix}<br>
--1&amp;-2&amp;2\<br>
-0&amp;0&amp;0\<br>
-0&amp;0&amp;0\<br>
+-1&amp;-2&amp;2\\<br>
+0&amp;0&amp;0\\<br>
+0&amp;0&amp;0\\<br>
 \end{bmatrix}\\\Rightarrow<br>
 x_1=-2x_2+2x_3\\<br>
-所以，\xi_1=\begin{bmatrix}-2\1\0 \end{bmatrix}，<br>
-\xi_1=\begin{bmatrix}2\0\1 \end{bmatrix}\\<br>
+所以，\xi_1=\begin{bmatrix}-2\\1\\0 \end{bmatrix}，<br>
+\xi_1=\begin{bmatrix}2\\0\\1 \end{bmatrix}\\<br>
 特征值为2的全部特征向量为k_1\xi_1+k_2\xi_2\\<br>
-②同理可得，\lambda=-7的特征向量\xi_3=\begin{bmatrix}1\2\-2 \end{bmatrix}\\<br>
+②同理可得，\lambda=-7的特征向量\xi_3=\begin{bmatrix}1\\2\\-2 \end{bmatrix}\\<br>
 其全部特征向量为k_3\xi_3\\k_1,k_2,k_3均不为0<br>
 $$</p>
 <h2 id="性质：">性质：</h2>
 <p>$$<br>
 若\lambda是A的特征值，那么：\\<br>
-1.A^T的特征值是\lambda\<br>
-2.A^{-1}的特征值是\lambda^{-1}\<br>
-3.kA的特征值是k\lambda\<br>
-4.A^m的特征值是\lambda^m\<br>
-5.f(A)的特征值是f(\lambda)\<br>
-6.A^*的特征值是\frac{|A|}\lambda\<br>
-7.\lambda_1\lambda_2\cdots \lambda_n=|A|\<br>
+1.A^T的特征值是\lambda\\<br>
+2.A^{-1}的特征值是\lambda^{-1}\\<br>
+3.kA的特征值是k\lambda\\<br>
+4.A^m的特征值是\lambda^m\\<br>
+5.f(A)的特征值是f(\lambda)\\<br>
+6.A^*的特征值是\frac{|A|}\lambda\\<br>
+7.\lambda_1\lambda_2\cdots \lambda_n=|A|\\<br>
 8.\lambda_1+\lambda_2+\cdots +\lambda_n=a_{11}+a_{22}+\cdots+a_{nn}<br>
 $$</p>
 <h1>二次型</h1>
@@ -1604,7 +1605,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-
+<link href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/KaTeX/0.10.2/katex.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
