@@ -474,8 +474,8 @@
 <p>期末复习啊啊啊呜呜呜</p>
 <p>最基本的知识点</p>
 </blockquote>
-<h1>1.行列式解方程组</h1>
-<h2 id="1-1克莱默法则">1.1克莱默法则</h2>
+<h1>行列式解方程组</h1>
+<h2 id="克莱默法则">克莱默法则</h2>
 <p>用来解线性方程组<br>
 $$<br>
 Ax=b\<br>
@@ -489,7 +489,7 @@ x_j=\frac{D_j}{D},\quad j=1,2,\cdots,n \ \<br>
 其中D_j=(a_1,a_2,\cdots,a_j-1,b,a_j+1,\cdots,a_n)<br>
 $$</p>
 <p><img src="cramer.png" alt="克莱默"></p>
-<h2 id="1-2线性方程组的解">1.2线性方程组的解</h2>
+<h2 id="线性方程组的解">线性方程组的解</h2>
 <p>行空间与与零空间互补</p>
 <p>从行列式的角度来说，如果行列式不为零，那么有唯一解；如果行列式等于零，有可能无解，也有可能有无数组解。</p>
 <p>例如：</p>
@@ -500,8 +500,8 @@ $$<br>
 当\lambda=0时，有无穷多解\<br>
 当\lambda=-3时，无解<br>
 $$</p>
-<h1>2.逆矩阵的求法</h1>
-<h2 id="2-1定义法">2.1定义法</h2>
+<h1>逆矩阵的求法</h1>
+<h2 id="定义法">定义法</h2>
 <p>利用待定系数的方法求解，例如：<br>
 $$<br>
 有矩阵A = \begin{bmatrix}1&amp;2\-1&amp;-3 \end{bmatrix},\quad<br>
@@ -510,7 +510,7 @@ $$<br>
 $$<br>
 二阶矩阵要解4个方程，三阶矩阵要解9个方程，四阶矩阵要解16个方程……</p>
 <p>可以看出此方法的局限性，也就解个二阶矩阵用用</p>
-<h2 id="2-2伴随矩阵法">2.2伴随矩阵法</h2>
+<h2 id="伴随矩阵法">伴随矩阵法</h2>
 <p>伴随矩阵是由原矩阵各项的代数余子式组成的</p>
 <p><strong>代数余子式：</strong><br>
 $$<br>
@@ -546,7 +546,7 @@ $$<br>
 A^{-1}=\frac{A^*}{|A|}<br>
 $$<br>
 <s>不可不谓之暴算，等我大汗淋漓求出此逆之时，早就收卷了</s></p>
-<h2 id="2-3初等变换法">2.3初等变换法</h2>
+<h2 id="初等变换法">初等变换法</h2>
 <p>把要求逆的矩阵的右边拼上一个单位阵，进行初等行变换，使得单位阵变到左边，剩下右边的为原矩阵的逆。<br>
 $$<br>
 A=<br>
@@ -578,10 +578,10 @@ A_2=<br>
 右侧的部分就是A的逆A^{-1}<br>
 $$<br>
 <s>爱了，爱了</s></p>
-<h1>3.分块矩阵</h1>
-<h2 id="3-1加法与数乘与乘法">3.1加法与数乘与乘法</h2>
+<h1>分块矩阵</h1>
+<h2 id="加法与数乘与乘法">加法与数乘与乘法</h2>
 <p>与普通矩阵的运算法则一致</p>
-<h2 id="3-2转置">3.2转置</h2>
+<h2 id="转置">转置</h2>
 <p>类比分步求导，先以各分块为单位作转置，再把各分块内部取转置。</p>
 <p>例：<br>
 $$<br>
@@ -613,8 +613,8 @@ $$</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26285415">分块矩阵行列式</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/47760591">分块矩阵求逆</a></p>
 <p>还有秩……</p>
-<h1>4.向量线性相关和线性无关</h1>
-<h2 id="4-1基的变换">4.1基的变换</h2>
+<h1>向量线性相关和线性无关</h1>
+<h2 id="基的变换">基的变换</h2>
 <p>$$<br>
 设B{b_1,b_2,\cdots,b_n}和C{c_1,c_2,\cdots,c_n}都是向量空间V的基，则存在一个n\times n的矩阵\underset{C\leftarrow B}{P}使得\\<br>
 [x]_C =\underset{C\leftarrow B}{P} [x]_B\\<br>
@@ -701,8 +701,8 @@ c_2=<br>
 -5&amp;-3<br>
 \end{bmatrix}<br>
 $$</p>
-<h2 id="4-2施密特正交化">4.2施密特正交化</h2>
-<h3 id="4-2-1-定义">4.2.1.定义</h3>
+<h2 id="施密特正交化">施密特正交化</h2>
+<h3 id="定义">定义</h3>
 <p>施密特正交化（Schmidt orthogonalization）是求欧氏空间正交基的一种方法。从欧氏空间任意线性无关的向量组α1，α2，……，αm出发，求得正交向量组β1，β2，……，βm，使由α1，α2，……，αm与向量组β1，β2，……，βm等价，再将正交向量组中每个向量经过单位化，就得到一个标准正交向量组，这种方法称为施密特正交化。</p>
 <h3 id="4-2-2-计算">4.2.2.计算</h3>
 <p>以此矩阵为例<br>
@@ -749,9 +749,9 @@ $$<br>
 \varepsilon_2 = \frac{b_2}{||b_2||} = \begin{bmatrix}-\frac{\sqrt{3}}{2}\\frac{\sqrt{3}}{6}\\frac{\sqrt{3}}{6}\\frac{\sqrt{3}}{6} \end{bmatrix},\<br>
 \varepsilon_3 = \frac{b_3}{||b_1||} = \begin{bmatrix}0\-\frac{\sqrt{6}}{3}\\frac{\sqrt{6}}{6}\\frac{\sqrt{6}}{6} \end{bmatrix}\<br>
 $$</p>
-<h3 id="4-2-3-不唯一">4.2.3.不唯一</h3>
+<h3 id="不唯一">不唯一</h3>
 <p>正交化的向量组不唯一. 按施密特正交化过程, 我们将向量组中的向量打乱顺序得到的向量组也不一样，标准正交基也不是唯一的.</p>
-<h1>5.等价、相似、合同</h1>
+<h1>等价、相似、合同</h1>
 <h2 id="矩阵等价">矩阵等价</h2>
 <p>$$<br>
 若存在可逆阵P和Q，使得B=PAQ，则称矩阵A与B等价，记作A\cong B<br>
@@ -772,7 +772,7 @@ A\sim B\Rightarrow A\cong B\<br>
 反之，均不成立<br>
 $$</p>
 <p>一般而言，相似与合同没有关系。但是，正交相似与正交合同是同一回事。而且实对称矩阵一定与对角阵合同。</p>
-<h1>7.特征值特征向量</h1>
+<h1>特征值特征向量</h1>
 <h2 id="定义：">定义：</h2>
 <p>$$<br>
 A是n阶方阵，\lambda是一个数字，若存在非零向量\alpha，使得A\alpha=\lambda\alpha,<br>
@@ -831,7 +831,7 @@ $$</p>
 7.\lambda_1\lambda_2\cdots \lambda_n=|A|\<br>
 8.\lambda_1+\lambda_2+\cdots +\lambda_n=a_{11}+a_{22}+\cdots+a_{nn}<br>
 $$</p>
-<h1>8.二次型</h1>
+<h1>二次型</h1>
 <h2 id="化二次型为标准型">化二次型为标准型</h2>
 <p>(1)把二次型系数写成实对称矩阵</p>
 <p>(2)施密特正交单位化</p>
@@ -841,7 +841,7 @@ $$</p>
 <p>特征值为正，则是正定阵</p>
 <p>特征值为负，则是负定阵</p>
 <p>特征值既有正的也有负的，则是不定阵</p>
-<h1>9.QR分解</h1>
+<h1>QR分解</h1>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lhxez6868/article/details/100165447">看这</a></p>
 
 
@@ -988,7 +988,7 @@ $$</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.行列式解方程组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-1%E5%85%8B%E8%8E%B1%E9%BB%98%E6%B3%95%E5%88%99"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1克莱默法则</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-2%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">1.2线性方程组的解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.逆矩阵的求法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1%E5%AE%9A%E4%B9%89%E6%B3%95"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">2.1定义法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E6%B3%95"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.2伴随矩阵法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-3%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E6%B3%95"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">2.3初等变换法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.分块矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-1%E5%8A%A0%E6%B3%95%E4%B8%8E%E6%95%B0%E4%B9%98%E4%B8%8E%E4%B9%98%E6%B3%95"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">3.1加法与数乘与乘法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-2%E8%BD%AC%E7%BD%AE"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">3.2转置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-3%E5%88%86%E5%9D%97%E4%B8%8A%E4%B8%89%E8%A7%92%E7%9F%A9%E9%98%B5%E7%9A%84%E9%80%86"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3分块上三角矩阵的逆</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4.向量线性相关和线性无关</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-1%E5%9F%BA%E7%9A%84%E5%8F%98%E6%8D%A2"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">4.1基的变换</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-2%E6%96%BD%E5%AF%86%E7%89%B9%E6%AD%A3%E4%BA%A4%E5%8C%96"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">4.2施密特正交化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-1-%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">4.2.1.定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-2-%E8%AE%A1%E7%AE%97"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">4.2.2.计算</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-3-%E4%B8%8D%E5%94%AF%E4%B8%80"><span class="toc-nav-number">4.2.3.</span> <span class="toc-nav-text">4.2.3.不唯一</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5.等价、相似、合同</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E7%AD%89%E4%BB%B7"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">矩阵等价</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%90%88%E5%90%8C"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">矩阵合同</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%BC%BC"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">矩阵相似</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E8%80%85%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">三者关系：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">7.特征值特征向量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">定义：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B1%82%E6%B3%95%EF%BC%9A"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">求法：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%A7%E8%B4%A8%EF%BC%9A"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">性质：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">8.二次型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8C%96%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B8%BA%E6%A0%87%E5%87%86%E5%9E%8B"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">化二次型为标准型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">分类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">9.QR分解</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">行列式解方程组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%8B%E8%8E%B1%E9%BB%98%E6%B3%95%E5%88%99"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">克莱默法则</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">线性方程组的解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">逆矩阵的求法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89%E6%B3%95"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">定义法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E6%B3%95"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">伴随矩阵法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E6%B3%95"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">初等变换法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">分块矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%A0%E6%B3%95%E4%B8%8E%E6%95%B0%E4%B9%98%E4%B8%8E%E4%B9%98%E6%B3%95"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">加法与数乘与乘法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BD%AC%E7%BD%AE"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">转置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-3%E5%88%86%E5%9D%97%E4%B8%8A%E4%B8%89%E8%A7%92%E7%9F%A9%E9%98%B5%E7%9A%84%E9%80%86"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3.3分块上三角矩阵的逆</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">向量线性相关和线性无关</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9F%BA%E7%9A%84%E5%8F%98%E6%8D%A2"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">基的变换</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%BD%E5%AF%86%E7%89%B9%E6%AD%A3%E4%BA%A4%E5%8C%96"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">施密特正交化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-2-2-%E8%AE%A1%E7%AE%97"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">4.2.2.计算</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8D%E5%94%AF%E4%B8%80"><span class="toc-nav-number">4.2.3.</span> <span class="toc-nav-text">不唯一</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">等价、相似、合同</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E7%AD%89%E4%BB%B7"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">矩阵等价</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E5%90%88%E5%90%8C"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">矩阵合同</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%BC%BC"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">矩阵相似</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E8%80%85%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">三者关系：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">特征值特征向量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">定义：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B1%82%E6%B3%95%EF%BC%9A"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">求法：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%A7%E8%B4%A8%EF%BC%9A"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">性质：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">二次型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8C%96%E4%BA%8C%E6%AC%A1%E5%9E%8B%E4%B8%BA%E6%A0%87%E5%87%86%E5%9E%8B"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">化二次型为标准型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">分类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">QR分解</span></a></li></ol>
         
         </div>
       </aside>
