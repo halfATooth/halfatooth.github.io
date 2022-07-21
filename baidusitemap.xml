@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite-url/cn/sdu_adventure_1/</loc>
+    <lastmod>2022-07-20</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite-url/cn/2022summer_bussiness_contest/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
